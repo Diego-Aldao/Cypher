@@ -4,4 +4,373 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+p {
+  font-size: 0.8rem;
+}
+
+body {
+  overflow-x: hidden;
+  background: #f5f5f5;
+  font-family: var(--fuente-titulos);
+}
+
+.contenedor {
+  width: 95%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.textos-comunes {
+  text-transform: uppercase;
+  font-family: var(--fuente-titulos);
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 30px 0;
+  font-size: 0.85rem;
+  line-height: 30px;
+  color: #d4d4d4;
+}
+
+.pie-titulo {
+  text-align: center;
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  font-family: var(--fuente-titulos);
+  color: var(--fondo-obscuro);
+  font-weight: 900;
+  letter-spacing: 0.7px;
+  -webkit-transform: scale(1, 1.1);
+          transform: scale(1, 1.1);
+}
+
+:root {
+  --fondo-obscuro: #111517;
+  --color-textos-grandes: #ef0d33;
+  --fuente-titulos: "Open Sans", sans-serif;
+  --fuente-parrafos: "Oswald", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.titulos-grandes {
+  text-transform: uppercase;
+  font-family: var(--fuente-parrafos);
+  text-align: left;
+  color: var(--color-textos-grandes);
+  font-size: 2.1rem;
+}
+
+.btn {
+  background: none;
+  color: var(--color-textos-grandes);
+  border: 1px solid var(--color-textos-grandes);
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-family: var(--fuente-parrafos);
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.btn-secundario {
+  background: var(--fondo-obscuro);
+  color: #f5f5f5;
+  padding: 20px 30px;
+  border: none;
+  font-size: 0.9rem;
+  margin-bottom: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.btn-secundario i {
+  margin-left: 15px;
+}
+
+.header-principal {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/woman-wears-black-t-shirt-close-up-photography-2916324.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.slider-wrap {
+  background: #2d9703;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+}
+
+.slider-wrap:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.438);
+  z-index: 0;
+}
+
+.p-1 {
+  background: url(../images/woman-in-black-jacket-and-jeans-standing-beside-wall-with-3956803.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navegacion-principal {
+  position: relative;
+  z-index: 2;
+  background: aqua;
+  width: 100%;
+  height: 40px;
+}
+
+.navegacion-principal .contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navegacion-principal .logo {
+  width: 35%;
+  height: 100%;
+  background: green;
+}
+
+.navegacion-principal .hamburguesa {
+  width: 20%;
+  height: 100%;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navegacion-principal .hamburguesa .linea-hamburguesa {
+  background: white;
+  width: 40px;
+  height: 2px;
+}
+
+.contenido-header {
+  position: relative;
+  z-index: 2;
+  margin: 210px 0 85px;
+  height: 320px;
+}
+
+.contenido-header .span-grandes {
+  padding: 1px 15px 1px 0;
+  background: var(--fondo-obscuro);
+  margin: 2px 0;
+  display: inline-block;
+}
+
+.contenido-header .span-grandes:last-of-type {
+  padding-right: 45px;
+}
+
+.contenido-header .parrafos-rojos {
+  text-transform: uppercase;
+  font-family: var(--fuente-titulos);
+  color: var(--color-textos-grandes);
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 25px 0;
+}
+
+.contenido-header .parrafos-rojos span {
+  padding: 3px 5px 3px 0;
+  display: inline-block;
+  background: black;
+}
+
+.contenido-header .btn {
+  width: 65%;
+}
+
+.slider {
+  position: relative;
+  z-index: 2;
+  background: aqua;
+  width: 100%;
+  height: 100px;
+}
+
+.slider .contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider .scroll {
+  background: red;
+  width: 25%;
+  height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--fuente-titulos);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.primer-seccion {
+  background: var(--fondo-obscuro);
+  width: 100%;
+}
+
+.primer-seccion .contenedor {
+  padding: 100px 0;
+}
+
+.primer-seccion .header-primer-seccion {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.primer-seccion h1 {
+  background: black;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.primer-seccion span {
+  padding: 3px 5px 3px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+.primer-seccion .lista-primer-seccion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 50px;
+  color: #f5f5f5;
+}
+
+.primer-seccion .lista-primer-seccion li {
+  -ms-flex-preferred-size: 80px;
+      flex-basis: 80px;
+  margin: 5px 15px;
+  text-align: center;
+}
+
+.primer-seccion .lista-primer-seccion li p {
+  text-transform: uppercase;
+  font-family: var(--fuente-titulos);
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 0.75rem;
+}
+
+.portfolio .contenedor {
+  padding: 100px 0;
+}
+
+.portfolio .titulos-grandes {
+  color: var(--fondo-obscuro);
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.cartas-portfolio {
+  width: 100%;
+  margin-top: 50px;
+  padding-bottom: 25px;
+}
+
+.cartas-portfolio .mini-texto {
+  color: var(--color-textos-grandes);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 0.65rem;
+  display: inline-block;
+  -webkit-transform: scale(1, 1.3);
+          transform: scale(1, 1.3);
+  margin-bottom: 5px;
+}
+
+.cartas-portfolio .textos-medianos {
+  text-transform: uppercase;
+  font-family: var(--fuente-parrafos);
+  text-align: left;
+  color: var(--fondo-obscuro);
+  font-size: 1.5rem;
+  width: 80%;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+
+.cartas-portfolio .textos-comunes {
+  color: #a0a0a0;
+  font-size: 0.75rem;
+}
+
+.cartas-portfolio .imagenes-portfolio {
+  width: 100%;
+  height: 550px;
+  background: url(../images/woman-in-black-jacket-and-jeans-standing-beside-wall-with-3956803.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 /*# sourceMappingURL=styles.css.map */
