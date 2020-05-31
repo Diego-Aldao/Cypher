@@ -1,5 +1,5 @@
 $(".header-principal").slick({
-  infinite: true,
+  infinite: false,
   dots: false,
   arrows: false,
 });
