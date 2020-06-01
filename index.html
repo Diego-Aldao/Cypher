@@ -22,11 +22,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
     />
     <!--SLICK SLIDER-->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
     <!--CSS LOCALES-->
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/normalize.css" />
@@ -36,77 +32,62 @@
   <body>
     <header class="header-principal">
       <nav class="navegacion-principal">
-        <div class="contenedor">
-          <div class="logo">
-            <span>CYPHER</span>
-          </div>
-          <div class="hamburguesa">
-            <span class="linea-hamburguesa"></span>
-            <span class="linea-hamburguesa"></span>
-            <span class="linea-hamburguesa"></span>
-          </div>
+        <div class="logo">cypher</div>
+        <div class="hamburguesa">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </nav>
-      <div class="slider-wrap">
-        <div class="contenido-header">
-          <div class="contenedor">
-            <h1 class="titulos-grandes">
-              <span class="span-grandes">creamos ideas</span>
-              <span class="span-grandes">creativas e</span>
-              <span class="span-grandes">innovadoras</span>
-            </h1>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="contenido">
+              <h1 class="titulos-grandes">
+                <span class="span-grandes">creamos ideas</span>
+                <span class="span-grandes">creativas e</span>
+                <span class="span-grandes">innovadoras</span>
+              </h1>
 
-            <p class="parrafos-rojos">
-              <span>Lorem, ipsum dolor.</span
-              ><span>Cum molestias velit ut veritatis</span>
-            </p>
-            <button class="btn btn-principal">Leer Mas</button>
+              <p class="parrafos-rojos">
+                <span>Lorem, ipsum dolor.</span
+                ><span>Cum molestias velit ut veritatis</span>
+              </p>
+              <button class="btn btn-principal">Leer Mas</button>
+            </div>
           </div>
-        </div>
-      </div>
-      <nav class="slider">
-        <div class="contenedor">
-          <!--Aca van los botones del slider-->
-          <div class="scroll">
-            <span>scroll</span>
-            <i></i>
-          </div>
-          <!--Aca van los numeros del slider-->
-        </div>
-      </nav>
-      <div class="slider-wrap">
-        <div class="contenido-header">
-          <div class="contenedor">
-            <h1 class="titulos-grandes">
-              <span class="span-grandes">creamos ideas</span>
-              <span class="span-grandes">creativas e</span>
-              <span class="span-grandes">innovadoras</span>
-            </h1>
+          <div class="swiper-slide">
+            <div class="contenido">
+              <h1 class="titulos-grandes">
+                <span class="span-grandes">creamos ideas</span>
+                <span class="span-grandes">creativas e</span>
+                <span class="span-grandes">innovadoras</span>
+              </h1>
 
-            <p class="parrafos-rojos">
-              <span>Lorem, ipsum dolor.</span>
-              <span>Cum molestias velit ut veritatis</span>
-            </p>
-            <button class="btn btn-principal">Leer Mas</button>
+              <p class="parrafos-rojos">
+                <span>Lorem, ipsum dolor.</span
+                ><span>Cum molestias velit ut veritatis</span>
+              </p>
+              <button class="btn btn-principal">Leer Mas</button>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="slider-wrap p-1">
-        <div class="contenido-header">
-          <div class="contenedor">
-            <h1 class="titulos-grandes">
-              <span class="span-grandes">creamos ideas</span>
-              <span class="span-grandes">creativas e</span>
-              <span class="span-grandes">innovadoras</span>
-            </h1>
+          <div class="swiper-slide">
+            <div class="contenido">
+              <h1 class="titulos-grandes">
+                <span class="span-grandes">creamos ideas</span>
+                <span class="span-grandes">creativas e</span>
+                <span class="span-grandes">innovadoras</span>
+              </h1>
 
-            <p class="parrafos-rojos">
-              <span>Lorem, ipsum dolor.</span>
-              <span>Cum molestias velit ut veritatis</span>
-            </p>
-            <button class="btn btn-principal">Leer Mas</button>
+              <p class="parrafos-rojos">
+                <span>Lorem, ipsum dolor.</span
+                ><span>Cum molestias velit ut veritatis</span>
+              </p>
+              <button class="btn btn-principal">Leer Mas</button>
+            </div>
           </div>
         </div>
+        <div class="swiper-pagination"></div>
       </div>
     </header>
     <section class="primer-seccion">
@@ -498,10 +479,7 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

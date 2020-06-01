@@ -65,6 +65,18 @@ body {
   color: var(--color-textos-grandes);
   font-size: 2.1rem;
 }
+.parrafos-rojos {
+  text-transform: uppercase;
+  color: var(--color-textos-grandes);
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0px 0px 70px 8px;
+  span {
+    padding: 5px 5px 5px 0;
+    display: inline-block;
+    background: black;
+  }
+}
 img {
   max-width: 100%;
   max-height: 100%;
@@ -121,143 +133,98 @@ img {
 }
 
 //INICIO HEADER
-
 .header-principal {
   width: 100%;
   height: 100vh;
-  background: white;
-  @include background(cover, no-repeat, center);
-  background-attachment: fixed;
-  position: relative;
-}
-.slider-wrap {
-  background: rgb(45, 151, 3);
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background: transparent;
-}
-.slider-wrap:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-.p-1 {
-  background: url(../images/woman-in-black-jacket-and-jeans-standing-beside-wall-with-3956803.jpg);
-  @include background(cover, no-repeat, center);
-}
-
-.navegacion-principal {
-  background: black;
-  position: sticky;
-  top: 0px;
-  z-index: 2214124;
-  width: 100%;
-  height: 50px;
-  .contenedor {
-    @include flexbox(row, space-between, center);
+  nav {
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
   }
-  .logo {
-    width: 45%;
+  .logo,
+  .hamburguesa {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    padding: 0 5px;
     height: 100%;
-    @include flexbox(row, flex-start, center);
-    img {
-      width: 40px;
-      height: 40px;
-    }
-    span {
-      margin-left: 5px;
-      font-family: "Merienda One", cursive;
-      font-size: 1.5rem;
-      color: white;
-      font-weight: bold;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: red;
   }
   .hamburguesa {
-    width: 20%;
-    height: 100%;
-    @include flexbox(column, space-evenly, center);
-    .linea-hamburguesa {
-      background: white;
+    align-items: flex-end;
+    span {
       width: 40px;
       height: 2px;
+      background: white;
+      margin: 4px;
     }
   }
-}
-.contenido-header {
-  position: relative;
-  z-index: 2;
-  padding: 210px 0 0px;
-  height: 600px;
-  background: transparent;
-  .titulos-grandes {
-    width: 320px;
-  }
-  .span-grandes {
-    padding: 1px 15px 1px 0;
-    background: var(--fondo-obscuro);
-    margin: 2px 0;
-    display: inline-block;
-  }
-  .span-grandes:last-of-type {
-    padding-right: 45px;
-  }
-  .parrafos-rojos {
-    text-transform: uppercase;
-    color: var(--color-textos-grandes);
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin: 25px 0;
-    span {
-      padding: 5px 5px 5px 0;
-      display: inline-block;
-      background: black;
-    }
-  }
-  .btn {
-    width: 200px;
-  }
-}
-.slider {
-  position: absolute;
-  bottom: 0;
-  z-index: 2;
-  background: aqua;
-  width: 100%;
-  height: 100px;
-  .contenedor {
-    @include flexbox(row, center, center);
-  }
-  .scroll {
-    background: red;
-    width: 25%;
+  .swiper-container {
+    width: 100%;
     height: 100%;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
+  }
+  .swiper-slide {
+    width: 100%;
+    height: 100%;
+  }
+  .contenido {
+    background: rgba(0, 0, 0, 0.438);
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    .titulos-grandes {
+      width: 320px;
+      margin: 120px 0 20px 8px;
+    }
+    .span-grandes {
+      padding: 1px 15px 1px 0;
+      background: var(--fondo-obscuro);
+      margin: 2px 0;
+      display: inline-block;
+    }
+    .span-grandes:last-of-type {
+      padding-right: 45px;
+    }
+    .btn {
+      width: 200px;
+      align-self: flex-start;
+      margin-left: 8px;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: var(--color-textos-grandes);
+  }
+  .swiper-pagination {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    width: 100%;
   }
 }
 
 //HEADER MEDIA QUERYS
 
 @media (min-width: 768px) {
-  .contenido-header {
-    margin-top: 150px;
+  .contenido {
     .titulos-grandes {
       font-size: 2.8rem;
     }
-    .parrafos-rojos {
-      margin: 30px 0 50px;
-    }
     .btn {
-      padding: 20px 50px;
+      padding: 15px 45px;
     }
   }
 }
