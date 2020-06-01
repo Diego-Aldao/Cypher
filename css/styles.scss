@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.5s ease-out;
 }
 //GLOBALES
 
@@ -207,6 +208,8 @@ img {
   }
   .swiper-pagination-bullet-active {
     background-color: var(--color-textos-grandes);
+    transform: scale(1.5);
+    margin: 0 15px !important;
   }
   .swiper-pagination {
     display: flex;
@@ -225,6 +228,71 @@ img {
     }
     .btn {
       padding: 15px 45px;
+    }
+  }
+  .primer-seccion {
+    .contenedor {
+      display: flex;
+      flex-wrap: wrap;
+      .header-primer-seccion {
+        flex-basis: 100%;
+        .titulos-grandes {
+          font-size: 2.5rem;
+        }
+      }
+      .textos-comunes {
+        flex-basis: 50%;
+        padding: 5px;
+        line-height: 35px;
+      }
+      .lista-primer-seccion {
+        flex-basis: 100%;
+      }
+    }
+  }
+  .portfolio {
+    .cartas-portfolio {
+      display: flex;
+      flex-direction: row-reverse;
+      .cartas-descripcion {
+        flex-basis: 50%;
+        @include flexbox(column, center, flex-start);
+        padding: 0 0 0 30px;
+      }
+      .imagenes-portfolio {
+        flex-basis: 50%;
+      }
+    }
+    .cartas-portfolio:nth-child(odd) {
+      flex-direction: row;
+      .cartas-descripcion {
+        padding: 0 30px 0 0;
+      }
+    }
+  }
+  .partners {
+    .header-partners {
+      padding: 0 15px;
+      .textos-medianos {
+        font-size: 2.3rem;
+        line-height: 50px;
+      }
+    }
+    .contenedor-compañias {
+      .compañia-item {
+        flex-basis: 25%;
+      }
+      .compañia-item:nth-child(3),
+      .compañia-item:nth-child(7),
+      .compañia-item:nth-child(11) {
+        border-left: 1px solid rgb(158, 158, 158);
+      }
+      .compañia-item:nth-child(9),
+      .compañia-item:nth-child(10),
+      .compañia-item:nth-child(11),
+      .compañia-item:nth-child(12) {
+        border-bottom: none;
+      }
     }
   }
 }
@@ -302,6 +370,7 @@ img {
   padding: 85px 0;
   .header-partners {
     margin-bottom: 75px;
+    padding: 0 8px;
   }
   .textos-medianos {
     width: 60%;
@@ -331,8 +400,11 @@ img {
 }
 .testimonios {
   padding: 85px 0 55px;
+  overflow-x: hidden;
   .item-carrete {
+    max-width: 700px;
     padding: 15px 0;
+    margin: 0 auto;
     .imagen-item-carrete {
       background: url(../images/woman-wearing-eyeglasses-3584758.jpg);
       @include background(cover, no-repeat, center);
@@ -371,6 +443,7 @@ img {
       margin: 0;
     }
     .nombre-item-carrete {
+      margin-bottom: 20px;
       width: 100%;
       height: 25px;
       text-align: center;
@@ -383,6 +456,17 @@ img {
         color: rgb(122, 122, 122);
       }
     }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: var(--fondo-obscuro);
+    transform: scale(1.5);
+    margin: 0 15px !important;
+  }
+  .swiper-puntitos {
+    @include flexbox(row, center, center);
+  }
+  .swiper-pagination-bullet {
+    background: red;
   }
 }
 

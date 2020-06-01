@@ -4,6 +4,8 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 p {
@@ -242,6 +244,9 @@ img {
 
 .header-principal .swiper-pagination-bullet-active {
   background-color: var(--color-textos-grandes);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  margin: 0 15px !important;
 }
 
 .header-principal .swiper-pagination {
@@ -261,6 +266,92 @@ img {
   }
   .contenido .btn {
     padding: 15px 45px;
+  }
+  .primer-seccion .contenedor {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .primer-seccion .contenedor .header-primer-seccion {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .primer-seccion .contenedor .header-primer-seccion .titulos-grandes {
+    font-size: 2.5rem;
+  }
+  .primer-seccion .contenedor .textos-comunes {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    padding: 5px;
+    line-height: 35px;
+  }
+  .primer-seccion .contenedor .lista-primer-seccion {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .portfolio .cartas-portfolio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .portfolio .cartas-portfolio .cartas-descripcion {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 0 0 0 30px;
+  }
+  .portfolio .cartas-portfolio .imagenes-portfolio {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .portfolio .cartas-portfolio:nth-child(odd) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .portfolio .cartas-portfolio:nth-child(odd) .cartas-descripcion {
+    padding: 0 30px 0 0;
+  }
+  .partners .header-partners {
+    padding: 0 15px;
+  }
+  .partners .header-partners .textos-medianos {
+    font-size: 2.3rem;
+    line-height: 50px;
+  }
+  .partners .contenedor-compañias .compañia-item {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+  .partners .contenedor-compañias .compañia-item:nth-child(3),
+  .partners .contenedor-compañias .compañia-item:nth-child(7),
+  .partners .contenedor-compañias .compañia-item:nth-child(11) {
+    border-left: 1px solid #9e9e9e;
+  }
+  .partners .contenedor-compañias .compañia-item:nth-child(9),
+  .partners .contenedor-compañias .compañia-item:nth-child(10),
+  .partners .contenedor-compañias .compañia-item:nth-child(11),
+  .partners .contenedor-compañias .compañia-item:nth-child(12) {
+    border-bottom: none;
   }
 }
 
@@ -366,6 +457,7 @@ img {
 
 .partners .header-partners {
   margin-bottom: 75px;
+  padding: 0 8px;
 }
 
 .partners .textos-medianos {
@@ -406,10 +498,13 @@ img {
 
 .testimonios {
   padding: 85px 0 55px;
+  overflow-x: hidden;
 }
 
 .testimonios .item-carrete {
+  max-width: 700px;
   padding: 15px 0;
+  margin: 0 auto;
 }
 
 .testimonios .item-carrete .imagen-item-carrete {
@@ -457,6 +552,7 @@ img {
 }
 
 .testimonios .item-carrete .nombre-item-carrete {
+  margin-bottom: 20px;
   width: 100%;
   height: 25px;
   text-align: center;
@@ -470,6 +566,33 @@ img {
 
 .testimonios .item-carrete .nombre-item-carrete span {
   color: #7a7a7a;
+}
+
+.testimonios .swiper-pagination-bullet-active {
+  background-color: var(--fondo-obscuro);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  margin: 0 15px !important;
+}
+
+.testimonios .swiper-puntitos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonios .swiper-pagination-bullet {
+  background: red;
 }
 
 .blog {
