@@ -1,6 +1,8 @@
 var mySwiper = new Swiper(".swiper-container", {
   // Optional parameters
   direction: "horizontal",
+  speed: 1000,
+  parallax: true,
   loop: false,
   autoplay: {
     delay: 3500,
@@ -11,6 +13,7 @@ var mySwiper = new Swiper(".swiper-container", {
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
 
   // Navigation arrows
@@ -26,8 +29,10 @@ var mySwiper = new Swiper(".swiper-container", {
 });
 
 var swiper = new Swiper(".swiper-contenedor", {
-  spaceBetween: 30,
+  spaceBetween: 0,
+  speed: 1500,
   centeredSlides: true,
+  parallax: true,
   loop: true,
   autoplay: {
     delay: 3500,

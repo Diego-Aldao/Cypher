@@ -18,6 +18,40 @@ body {
   font-family: var(--fuente-titulos);
 }
 
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  background: url(../images/woman-in-black-jacket-and-jeans-standing-beside-wall-with-3956803.jpg);
+  background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.red {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.img-02 {
+  background: url(/images/woman-s-face-1988681.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-03 {
+  background: url(/images/woman-holding-smartphone-with-background-of-woman-s-face-3887990.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .contenedor {
   width: 95%;
   margin: 0 auto;
@@ -197,10 +231,11 @@ img {
 .header-principal .swiper-slide {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .header-principal .contenido {
-  background: rgba(0, 0, 0, 0.438);
+  background: rgba(0, 0, 0, 0.233);
   color: white;
   width: 100%;
   height: 100%;
@@ -217,6 +252,8 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+  z-index: 9999;
 }
 
 .header-principal .contenido .titulos-grandes {
@@ -240,6 +277,11 @@ img {
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin-left: 8px;
+}
+
+.header-principal .swiper-pagination-bullet {
+  background: white;
+  opacity: 1;
 }
 
 .header-principal .swiper-pagination-bullet-active {
@@ -482,9 +524,31 @@ img {
 }
 
 .partners .compañia-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   height: 150px;
+  padding: 15px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.partners .compañia-item img {
+  -webkit-filter: opacity(70%);
+          filter: opacity(70%);
 }
 
 .partners .compañia-item:nth-child(odd) {
@@ -496,12 +560,18 @@ img {
   border-bottom: 1px solid #9e9e9e;
 }
 
+.partners .compañia-item:nth-child(11),
+.partners .compañia-item:nth-child(12) {
+  border-bottom: none;
+}
+
 .testimonios {
   padding: 85px 0 55px;
   overflow-x: hidden;
 }
 
 .testimonios .item-carrete {
+  overflow: hidden;
   max-width: 700px;
   padding: 15px 0;
   margin: 0 auto;

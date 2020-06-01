@@ -15,7 +15,36 @@ body {
   background: #f5f5f5;
   font-family: var(--fuente-titulos);
 }
-
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  background: url(../images/woman-in-black-jacket-and-jeans-standing-beside-wall-with-3956803.jpg);
+  background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+.red {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+.img-02 {
+  background: url(/images/woman-s-face-1988681.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.img-03 {
+  background: url(/images/woman-holding-smartphone-with-background-of-woman-s-face-3887990.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .contenedor {
   width: 95%;
   margin: 0 auto;
@@ -177,9 +206,10 @@ img {
   .swiper-slide {
     width: 100%;
     height: 100%;
+    overflow: hidden;
   }
   .contenido {
-    background: rgba(0, 0, 0, 0.438);
+    background: rgba(0, 0, 0, 0.233);
     color: white;
     width: 100%;
     height: 100%;
@@ -187,6 +217,8 @@ img {
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    position: relative;
+    z-index: 9999;
     .titulos-grandes {
       width: 320px;
       margin: 120px 0 20px 8px;
@@ -206,11 +238,16 @@ img {
       margin-left: 8px;
     }
   }
+  .swiper-pagination-bullet {
+    background: white;
+    opacity: 1;
+  }
   .swiper-pagination-bullet-active {
     background-color: var(--color-textos-grandes);
     transform: scale(1.5);
     margin: 0 15px !important;
   }
+
   .swiper-pagination {
     display: flex;
     justify-content: flex-end;
@@ -387,8 +424,14 @@ img {
     margin: 0 auto;
   }
   .compañia-item {
+    @include flexbox(row, center, center);
     flex-basis: 50%;
     height: 150px;
+    padding: 15px;
+    @include background(cover, no-repeat, center);
+    img {
+      filter: opacity(70%);
+    }
   }
   .compañia-item:nth-child(odd) {
     border-right: 1px solid rgb(155, 155, 155);
@@ -397,11 +440,16 @@ img {
   .compañia-item:nth-child(even) {
     border-bottom: 1px solid rgb(158, 158, 158);
   }
+  .compañia-item:nth-child(11),
+  .compañia-item:nth-child(12) {
+    border-bottom: none;
+  }
 }
 .testimonios {
   padding: 85px 0 55px;
   overflow-x: hidden;
   .item-carrete {
+    overflow: hidden;
     max-width: 700px;
     padding: 15px 0;
     margin: 0 auto;
