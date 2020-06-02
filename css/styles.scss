@@ -142,19 +142,19 @@ img {
   width: 100%;
   height: 100%;
   max-height: 100%;
-  background: url(../images/woman-in-black-jacket-and-jeans-standing-beside-wall-with-3956803.jpg);
+  background: url(../images/woman-s-face-1988681.webp);
 }
 .img-02 {
-  background: url(/images/woman-s-face-1988681.jpg);
+  background: url(/images/asd1.webp);
 }
 .img-03 {
-  background: url(/images/woman-holding-smartphone-with-background-of-woman-s-face-3887990.jpg);
+  background: url(/images/woman-in-black-jacket-and-jeans-standing-beside-wall-with-3956803.webp);
 }
 .parallax-bg,
 .img-02,
 .img-03 {
   @include background(cover, no-repeat, center);
-  filter: brightness(0.8);
+  filter: brightness(1.1);
 }
 
 //INICIO HEADER
@@ -418,7 +418,7 @@ img {
   .imagenes-portfolio {
     width: 100%;
     height: 550px;
-    background: url(../images/woman-in-black-jacket-and-jeans-standing-beside-wall-with-3956803.jpg);
+    background: url(../images/asd1.webp);
     @include background(cover, no-repeat, center);
   }
 }
@@ -474,7 +474,7 @@ img {
     padding: 15px 0;
     margin: 0 auto;
     .imagen-item-carrete {
-      background: url(../images/woman-wearing-eyeglasses-3584758.jpg);
+      background: url(../images/woman-holding-smartphone-with-background-of-woman-s-face-3887990.webp);
       @include background(cover, no-repeat, center);
       height: 120px;
       width: 120px;
