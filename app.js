@@ -1,7 +1,7 @@
 var mySwiper = new Swiper(".swiper-container", {
   // Optional parameters
   direction: "horizontal",
-  speed: 1000,
+  speed: 3000,
   parallax: true,
   loop: false,
   autoplay: {
