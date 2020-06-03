@@ -202,7 +202,7 @@ img {
   width: 100%;
   height: 100%;
   max-height: 100%;
-  background: url(../images/woman-s-face-1988681.webp);
+  background: url(../images/woman-in-white-tube-on-focus-photography-2114333.webp);
 }
 
 .img-02 {
@@ -210,7 +210,7 @@ img {
 }
 
 .img-03 {
-  background: url(/images/woman-in-black-jacket-and-jeans-standing-beside-wall-with-3956803.webp);
+  background: url(/images/side-view-photo-of-woman-2010877.webp);
 }
 
 .parallax-bg,
@@ -487,7 +487,12 @@ img {
 
 .portfolio .cartas-portfolio {
   width: 100%;
-  padding-bottom: 25px;
+  padding-bottom: 5px;
+  margin-bottom: 55px;
+}
+
+.portfolio .cartas-portfolio .textos-medianos {
+  width: 60%;
 }
 
 .portfolio .cartas-portfolio .textos-comunes {
@@ -497,11 +502,10 @@ img {
 
 .portfolio .cartas-portfolio .imagenes-portfolio {
   width: 100%;
-  height: 550px;
-  background: url(../images/asd1.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+}
+
+.portfolio .cartas-portfolio .btn {
+  margin-bottom: 10px;
 }
 
 @media (min-width: 768px) {
@@ -654,7 +658,7 @@ img {
 }
 
 .testimonios .item-carrete .imagen-item-carrete {
-  background: url(../images/woman-holding-smartphone-with-background-of-woman-s-face-3887990.webp);
+  background: url(../images/woman-wears-black-t-shirt-close-up-photography-2916324.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -767,6 +771,7 @@ img {
 .blog .cartas-blog .contenedor-imagen-blog {
   margin-bottom: 25px;
   width: 100%;
+  background: red;
 }
 
 .blog .cartas-blog .tags-blog {
@@ -860,12 +865,6 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .blog .cartas-blog .contenedor-imagen-blog {
-    height: 190px;
-  }
-  .blog .cartas-blog .contenedor-imagen-blog img {
-    width: 100%;
   }
 }
 
