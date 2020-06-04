@@ -12,10 +12,6 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap"
-      rel="stylesheet"
-    />
     <!--FONT-AWESOME-->
     <link
       rel="stylesheet"
@@ -46,15 +42,31 @@
             <div class="contenido">
               <div data-swiper-parallax="-300">
                 <h1 class="titulos-grandes">
-                  <span class="span-grandes">creamos ideas</span>
-                  <span class="span-grandes">creativas e</span>
-                  <span class="span-grandes">innovadoras</span>
+                  <!--SPAN DENTRO DE SPAN EN VEZ DE UN AFTER PARA PODER CONTROLAR LA ANIMACION YA QUE NO PUEDO SELECCIONAR UN PSEUDO-ELEMENTO CON JS-->
+                  <span class="span-grandes">
+                    <span class="delay-1"></span>
+                    creamos ideas</span
+                  >
+
+                  <span class="span-grandes">
+                    <span class="delay-2"></span>
+                    creativas e</span
+                  >
+                  <span class="span-grandes">
+                    <span class="delay-3"></span>
+                    innovadoras</span
+                  >
                 </h1>
               </div>
               <div data-swiper-parallax="-100">
-                <p class="parrafos-rojos">
-                  <span>Lorem, ipsum dolor.</span
-                  ><span>Cum molestias velit ut veritatis</span>
+                <p class="contenedor-parrafos-rojos">
+                  <span class="parrafos-rojos">
+                    <span class="delay-1"></span>
+                    Lorem, ipsum dolor.</span
+                  ><span class="parrafos-rojos">
+                    <span class="delay-2"></span>
+                    Cum molestias velit ut veritatis</span
+                  >
                 </p>
               </div>
               <div data-swiper-parallax="-800">
@@ -67,15 +79,25 @@
             <div class="contenido">
               <div data-swiper-parallax="-300">
                 <h1 class="titulos-grandes">
-                  <span class="span-grandes">creamos ideas</span>
-                  <span class="span-grandes">creativas e</span>
-                  <span class="span-grandes">innovadoras</span>
+                  <span class="span-grandes">
+                    <span class="delay-1"></span>creamos ideas</span
+                  >
+                  <span class="span-grandes">
+                    <span class="delay-2"></span>creativas e</span
+                  >
+                  <span class="span-grandes">
+                    <span class="delay-3"></span>innovadoras</span
+                  >
                 </h1>
               </div>
               <div data-swiper-parallax="-200">
-                <p class="parrafos-rojos">
-                  <span>Lorem, ipsum dolor.</span
-                  ><span>Cum molestias velit ut veritatis</span>
+                <p class="contenedor-parrafos-rojos">
+                  <span class="parrafos-rojos">
+                    <span class="delay-1"></span>Lorem, ipsum dolor.</span
+                  ><span class="parrafos-rojos">
+                    <span class="delay-2"></span>Cum molestias velit ut
+                    veritatis</span
+                  >
                 </p>
               </div>
               <div data-swiper-parallax="-800">
@@ -88,15 +110,25 @@
             <div class="contenido">
               <div data-swiper-parallax="-500">
                 <h1 class="titulos-grandes">
-                  <span class="span-grandes">creamos ideas</span>
-                  <span class="span-grandes">creativas e</span>
-                  <span class="span-grandes">innovadoras</span>
+                  <span class="span-grandes">
+                    <span class="delay-1"></span>creamos ideas</span
+                  >
+                  <span class="span-grandes">
+                    <span class="delay-2"></span>creativas e</span
+                  >
+                  <span class="span-grandes">
+                    <span class="delay-3"></span>innovadoras</span
+                  >
                 </h1>
               </div>
               <div data-swiper-parallax="-200">
-                <p class="parrafos-rojos">
-                  <span>Lorem, ipsum dolor.</span
-                  ><span>Cum molestias velit ut veritatis</span>
+                <p class="contenedor-parrafos-rojos">
+                  <span class="parrafos-rojos">
+                    <span class="delay-1"></span>Lorem, ipsum dolor.</span
+                  ><span class="parrafos-rojos"
+                    ><span class="delay-2"></span>Cum molestias velit ut
+                    veritatis</span
+                  >
                 </p>
               </div>
               <div data-swiper-parallax="-800">
@@ -112,7 +144,11 @@
       <div class="contenedor">
         <header class="header-primer-seccion">
           <h1 class="titulos-grandes">
-            <span>somos creativos</span><span>somos cypher</span>
+            <span class="span-grandes">
+              <span class="delay-1"></span>somos creativos</span
+            ><span class="span-grandes">
+              <span class="delay-2"></span>somos cypher</span
+            >
           </h1>
         </header>
         <div class="contenido-primer-seccion">
@@ -157,6 +193,7 @@
         <div class="cartas-portfolio">
           <div class="cartas-descripcion">
             <span class="mini-texto">
+              <span class="delay-1"></span>
               ui-ux
             </span>
             <h2 class="textos-medianos">
@@ -174,6 +211,7 @@
           </div>
           <div class="imagenes-portfolio">
             <img
+              loading="lazy"
               src="./images/person-with-yellow-suit-sitting-on-a-chair-3770672.webp"
               alt=""
             />
@@ -182,6 +220,7 @@
         <div class="cartas-portfolio">
           <div class="cartas-descripcion">
             <span class="mini-texto">
+              <span class="delay-1"></span>
               branding
             </span>
             <h2 class="textos-medianos">
@@ -198,6 +237,7 @@
           </div>
           <div class="imagenes-portfolio">
             <img
+              loading="lazy"
               src="./images/woman-in-brown-shirt-standing-1679011.webp"
               alt=""
             />
@@ -206,6 +246,7 @@
         <div class="cartas-portfolio">
           <div class="cartas-descripcion">
             <span class="mini-texto">
+              <span class="delay-1"></span>
               marketing
             </span>
             <h2 class="textos-medianos">
@@ -221,7 +262,11 @@
             </button>
           </div>
           <div class="imagenes-portfolio">
-            <img src="./images/woman-s-face-1988681.webp" alt="" />
+            <img
+              loading="lazy"
+              src="./images/woman-s-face-1988681.webp"
+              alt=""
+            />
           </div>
         </div>
         <div class="cartas-portfolio">
@@ -241,6 +286,7 @@
           </div>
           <div class="imagenes-portfolio">
             <img
+              loading="lazy"
               src="./images/woman-in-black-jacket-and-jeans-standing-beside-wall-with-3956803.webp"
               alt=""
             />
@@ -257,72 +303,84 @@
       <div class="contenedor-compañias">
         <div class="compañia-item">
           <img
+            loading="lazy"
             src="./images/logos-business/kisspng-blue-bird-corporation-bus-blue-bird-micro-bird-blu-company-logo-5ad5b5a8d698d7.995529311523955112879.webp"
             alt=""
           />
         </div>
         <div class="compañia-item">
           <img
+            loading="lazy"
             src="./images/logos-business/kisspng-ford-motor-company-car-lincoln-motor-company-logo-cars-logo-brands-5abc228e16ddd3.5895739815222790540937.webp"
             alt=""
           />
         </div>
         <div class="compañia-item">
           <img
+            loading="lazy"
             src="./images/logos-business/kisspng-titan-watches-ltd-titan-company-manufacturing-logo-company-5abff46eda8c88.4644710915225293908952.webp"
             alt=""
           />
         </div>
         <div class="compañia-item">
           <img
+            loading="lazy"
             src="./images/logos-business/kisspng-logo-stock-photography-royalty-free-clip-art-fashion-personalized-company-logo-vector-5a8616a12d4486.5804306715187370571854.webp"
             alt=""
           />
         </div>
         <div class="compañia-item">
           <img
+            loading="lazy"
             src="./images/logos-business/kisspng-3d-printing-3d-printers-too-bad-so-sad-metal-quality-high-grade-business-card-5aef8af375c5d8.5772907315256481154824.webp"
             alt=""
           />
         </div>
         <div class="compañia-item">
           <img
+            loading="lazy"
             src="./images/logos-business/kisspng-logo-nairobi-gospel-assembly-church-brand-architec-construction-company-logo-design-5b29a346558310.1003989415294554303503.webp"
             alt=""
           />
         </div>
         <div class="compañia-item">
           <img
+            loading="lazy"
             src="./images/logos-business/kisspng-logo-home-improvement-royalty-free-illustration-creative-company-logo-vector-5a9d3bd4142984.4210473215202539080826.webp"
             alt=""
           />
         </div>
         <div class="compañia-item">
           <img
+            loading="lazy"
             src="./images/logos-business/kisspng-logo-graphic-design-construction-company-logo-design-5b29a6e9ef9314.9821753215294563619813.webp"
             alt=""
           />
         </div>
         <div class="compañia-item">
           <img
+            loading="lazy"
             src="./images/logos-business/kisspng-airbus-a350-airbus-middle-east-airbus-helicopters-emirates-vector-5ae04d22e9cd41.8863473715246492509577.webp"
             alt=""
           />
         </div>
         <div class="compañia-item">
           <img
+            loading="lazy"
             src="./images/logos-business/kisspng-logo-royalty-free-illustration-creative-company-logo-vector-5a8332eecbb402.6224085115185476948344.webp"
             alt=""
           />
         </div>
         <div class="compañia-item">
           <img
+            loading="lazy"
             src="./images/logos-business/5a305820764279.1610105215131177284844.webp"
             alt=""
           />
         </div>
         <div class="compañia-item">
           <img
+            loading="lazy"
             src="/images/logos-business/kisspng-clip-art-vector-graphics-logo-field-hockey-image-151-bold-modern-logo-designs-for-ax-a-business-in-5bab039e3e0091.628554641537934238254.webp"
             alt=""
           />
@@ -458,6 +516,7 @@
         <div class="cartas-blog">
           <div class="contenedor-imagen-blog">
             <img
+              loading="lazy"
               src="./images/woman-in-white-sweater-standing-beside-plants-3271679.webp"
               alt=""
             />
@@ -490,6 +549,7 @@
         <div class="cartas-blog">
           <div class="contenedor-imagen-blog">
             <img
+              loading="lazy"
               src="./images/woman-wears-black-leather-zip-up-jacket-1035685 (1).webp"
               alt=""
             />
@@ -522,6 +582,7 @@
         <div class="cartas-blog">
           <div class="contenedor-imagen-blog">
             <img
+              loading="lazy"
               src="./images/woman-in-yellow-coat-with-black-crossbody-bag-closing-her-833052 (1).webp"
               alt=""
             />
