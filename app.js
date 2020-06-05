@@ -70,4 +70,24 @@ document.addEventListener("DOMContentLoaded", function () {
       delayTres[x].style.left = "600px";
     }
   });
+  let botonAbrir = document.querySelector(".boton-abrir");
+  let botonCerrar = document.querySelector(".boton-cerrar");
+  let menuDesplegable = document.querySelector(".menu-desplegable");
+  let cruzUno = document.querySelector(".cruz");
+  let cruzDos = document.querySelector(".cruz-02");
+
+  botonAbrir.addEventListener("click", function abrir() {
+    menuDesplegable.style.right = "0";
+    if ((cruzUno.style.transform = "rotate(0)")) {
+      cruzUno.style.transform = "rotate(135deg)";
+      cruzDos.style.transform = "rotate(-135deg)";
+      //RESETEO DE VALORES POR SI EL MENU SE ABRE MAS DE UNA VEZ
+    }
+  });
+
+  botonCerrar.addEventListener("click", function cerrar() {
+    menuDesplegable.style.right = "-100%";
+    cruzUno.style.transform = "rotate(0)";
+    cruzDos.style.transform = "rotate(0)";
+  });
 });

@@ -61,7 +61,8 @@ p {
 }
 
 body {
-  overflow-x: hidden;
+  width: 100%;
+  overflow-x: hidden !important;
   background: var(--fondo-obscuro);
   font-family: var(--fuente-titulos);
   font-display: swap;
@@ -89,6 +90,7 @@ img {
 .pie-titulo,
 .titulos-grandes {
   color: var(--fondo-obscuro);
+  overflow: hidden;
 }
 
 .textos-comunes {
@@ -234,11 +236,14 @@ img {
 .header-principal {
   width: 100%;
   height: 100vh;
+  overflow-x: hidden;
+  position: relative;
   .navegacion-principal {
     width: 100%;
     height: 45px;
     position: absolute;
     top: 0;
+    left: 0;
     z-index: 9999;
     @include flexbox(row, space-between, center);
   }
@@ -344,6 +349,10 @@ img {
   }
   .titulos-grandes {
     color: var(--color-textos-grandes);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .contenido-primer-seccion {
     width: 100%;
@@ -356,8 +365,6 @@ img {
   }
   span {
     padding: 3px 5px 3px 0;
-    display: inline-block;
-    width: 100%;
   }
   .lista-primer-seccion {
     @include flexbox(row, center, center);
@@ -419,6 +426,10 @@ img {
     margin-bottom: 55px;
     .textos-medianos {
       width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: left;
     }
     .textos-comunes {
       color: #a0a0a0;
@@ -626,7 +637,6 @@ img {
     .contenedor-imagen-blog {
       margin-bottom: 25px;
       width: 100%;
-      background: red;
     }
     .tags-blog {
       display: flex;
@@ -768,11 +778,87 @@ img {
   position: absolute;
   background: white;
   transition: 0.35s ease-in;
-  z-index: 10000;
+  z-index: 5;
 }
 .delay-2 {
   transition: 0.65s ease-in;
 }
 .delay-3 {
   transition: 0.95s ease-in;
+}
+.menu-desplegable {
+  width: 100%;
+  height: 100vh;
+  background: black;
+  top: 0;
+  position: absolute;
+  right: -100%;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  transition-delay: 0.5s;
+  .navegacion-desplegable {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background: black;
+    .boton-cerrar {
+      width: 65px;
+      height: 100%;
+      @include flexbox(column, center, center);
+      position: relative;
+    }
+    .cruz {
+      background: white;
+      width: 50px;
+      height: 3px;
+      margin: 2px;
+      position: absolute;
+      transform: rotate(-45deg); //PARA LOGRAR UNA CRUZ CENTRADA
+    }
+    .cruz-02 {
+      transform: rotate(45deg);
+    } //EFECTO AL USAR LA API
+  }
+  .contenedor-imagen-descripcion {
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+  }
+  .imagen-desplegable {
+    display: none;
+    img {
+      width: 100%;
+    }
+  }
+
+  .descripcion-desplegable {
+    width: 100%;
+    height: 100%;
+    color: white;
+    @include flexbox(column, center, center);
+    .titulos-grandes {
+      color: white;
+      margin: 10px 0;
+      font-size: max(2rem);
+    }
+  }
+}
+//MEDIA QUERYS DDMENU-OCULTO
+
+//QUERYS 768PX
+
+@media (min-width: 768px) {
+  .menu-desplegable {
+    .imagen-desplegable {
+      display: flex;
+      width: 50%;
+      height: 100%;
+    }
+    .descripcion-desplegable {
+      width: 50%;
+    }
+  }
 }
