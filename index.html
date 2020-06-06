@@ -31,6 +31,14 @@
   </head>
   <body>
     <header class="header-principal">
+      <nav class="navegacion-principal">
+        <div class="logo-contenedor"><p class="logo">cypher</p></div>
+        <div class="hamburguesa boton-abrir">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
       <div class="menu-desplegable">
         <nav class="navegacion-desplegable">
           <div class="logo">cypher</div>
@@ -55,14 +63,6 @@
           </div>
         </div>
       </div>
-      <nav class="navegacion-principal">
-        <div class="logo-contenedor"><p class="logo">cypher</p></div>
-        <div class="hamburguesa boton-abrir">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -72,16 +72,16 @@
                 <h1 class="titulos-grandes">
                   <!--SPAN DENTRO DE SPAN EN VEZ DE UN AFTER PARA PODER CONTROLAR LA ANIMACION YA QUE NO PUEDO SELECCIONAR UN PSEUDO-ELEMENTO CON JS-->
                   <span class="span-grandes">
-                    <span class="delay-1"></span>
+                    <span class="delay-1 intersectionObserver"></span>
                     creamos ideas</span
                   >
 
                   <span class="span-grandes">
-                    <span class="delay-2"></span>
+                    <span class="delay-2 intersectionObserver"></span>
                     creativas e</span
                   >
                   <span class="span-grandes">
-                    <span class="delay-3"></span>
+                    <span class="delay-3 intersectionObserver"></span>
                     innovadoras</span
                   >
                 </h1>
@@ -89,10 +89,10 @@
               <div data-swiper-parallax="-100">
                 <p class="contenedor-parrafos-rojos">
                   <span class="parrafos-rojos">
-                    <span class="delay-1"></span>
+                    <span class="delay-1 intersectionObserver"></span>
                     Lorem, ipsum dolor.</span
                   ><span class="parrafos-rojos">
-                    <span class="delay-2"></span>
+                    <span class="delay-2 intersectionObserver"></span>
                     Cum molestias velit ut veritatis</span
                   >
                 </p>
@@ -108,23 +108,27 @@
               <div data-swiper-parallax="-300">
                 <h1 class="titulos-grandes">
                   <span class="span-grandes">
-                    <span class="delay-1"></span>creamos ideas</span
+                    <span class="delay-1 intersectionObserver"></span>creamos
+                    ideas</span
                   >
                   <span class="span-grandes">
-                    <span class="delay-2"></span>creativas e</span
+                    <span class="delay-2 intersectionObserver"></span>creativas
+                    e</span
                   >
                   <span class="span-grandes">
-                    <span class="delay-3"></span>innovadoras</span
+                    <span class="delay-3 intersectionObserver"></span
+                    >innovadoras</span
                   >
                 </h1>
               </div>
               <div data-swiper-parallax="-200">
                 <p class="contenedor-parrafos-rojos">
                   <span class="parrafos-rojos">
-                    <span class="delay-1"></span>Lorem, ipsum dolor.</span
+                    <span class="delay-1 intersectionObserver"></span>Lorem,
+                    ipsum dolor.</span
                   ><span class="parrafos-rojos">
-                    <span class="delay-2"></span>Cum molestias velit ut
-                    veritatis</span
+                    <span class="delay-2 intersectionObserver"></span>Cum
+                    molestias velit ut veritatis</span
                   >
                 </p>
               </div>
@@ -139,23 +143,27 @@
               <div data-swiper-parallax="-500">
                 <h1 class="titulos-grandes">
                   <span class="span-grandes">
-                    <span class="delay-1"></span>creamos ideas</span
+                    <span class="delay-1 intersectionObserver"></span>creamos
+                    ideas</span
                   >
                   <span class="span-grandes">
-                    <span class="delay-2"></span>creativas e</span
+                    <span class="delay-2 intersectionObserver"></span>creativas
+                    e</span
                   >
                   <span class="span-grandes">
-                    <span class="delay-3"></span>innovadoras</span
+                    <span class="delay-3 intersectionObserver"></span
+                    >innovadoras</span
                   >
                 </h1>
               </div>
               <div data-swiper-parallax="-200">
                 <p class="contenedor-parrafos-rojos">
                   <span class="parrafos-rojos">
-                    <span class="delay-1"></span>Lorem, ipsum dolor.</span
+                    <span class="delay-1 intersectionObserver"></span>Lorem,
+                    ipsum dolor.</span
                   ><span class="parrafos-rojos"
-                    ><span class="delay-2"></span>Cum molestias velit ut
-                    veritatis</span
+                    ><span class="delay-2 intersectionObserver"></span>Cum
+                    molestias velit ut veritatis</span
                   >
                 </p>
               </div>
@@ -173,9 +181,11 @@
         <header class="header-primer-seccion">
           <h1 class="titulos-grandes">
             <span class="span-grandes">
-              <span class="delay-1"></span>somos creativos</span
+              <span class="delay-1 intersectionObserver"></span>somos
+              creativos</span
             ><span class="span-grandes">
-              <span class="delay-2"></span>somos cypher</span
+              <span class="delay-2 intersectionObserver"></span>somos
+              cypher</span
             >
           </h1>
         </header>
@@ -221,18 +231,21 @@
         <div class="cartas-portfolio">
           <div class="cartas-descripcion">
             <span class="mini-texto">
-              <span class="delay-1"></span>
+              <span class="delay-1 intersectionObserver"></span>
               ui-ux
             </span>
             <h2 class="textos-medianos">
               <span class="span-grandes">
-                <span class="delay-1"></span>Lorem ipsum</span
+                <span class="delay-1 intersectionObserver"></span>Lorem
+                ipsum</span
               >
               <span class="span-grandes">
-                <span class="delay-2"></span>dolor sit amet</span
+                <span class="delay-2 intersectionObserver"></span>dolor sit
+                amet</span
               >
               <span class="span-grandes">
-                <span class="delay-3"></span>consectetur.</span
+                <span class="delay-3 intersectionObserver"></span
+                >consectetur.</span
               >
             </h2>
             <p class="textos-comunes">
@@ -246,7 +259,7 @@
             </button>
           </div>
           <div class="imagenes-portfolio">
-            <span class="delay-1"></span>
+            <span class="delay-1 intersectionObserver"></span>
             <img
               loading="lazy"
               src="./images/person-with-yellow-suit-sitting-on-a-chair-3770672.webp"
@@ -257,21 +270,24 @@
         <div class="cartas-portfolio">
           <div class="cartas-descripcion">
             <span class="mini-texto">
-              <span class="delay-1"></span>
+              <span class="delay-1 intersectionObserver"></span>
               branding
             </span>
             <h2 class="textos-medianos">
               <span class="span-grandes">
-                <span class="delay-1"></span>Exercitationem</span
+                <span class="delay-1 intersectionObserver"></span
+                >Exercitationem</span
               >
               <span class="span-grandes">
-                <span class="delay-3"></span> qui natus</span
+                <span class="delay-3 intersectionObserver"></span> qui
+                natus</span
               >
               <span class="span-grandes">
-                <span class="delay-1"></span>quisquam</span
+                <span class="delay-1 intersectionObserver"></span>quisquam</span
               >
               <span class="span-grandes">
-                <span class="delay-2"></span>rerum error</span
+                <span class="delay-2 intersectionObserver"></span>rerum
+                error</span
               >
             </h2>
             <p class="textos-comunes">
@@ -284,7 +300,7 @@
             </button>
           </div>
           <div class="imagenes-portfolio">
-            <span class="delay-1"></span>
+            <span class="delay-1 intersectionObserver"></span>
             <img
               loading="lazy"
               src="./images/woman-in-brown-shirt-standing-1679011.webp"
@@ -295,18 +311,20 @@
         <div class="cartas-portfolio">
           <div class="cartas-descripcion">
             <span class="mini-texto">
-              <span class="delay-1"></span>
+              <span class="delay-1 intersectionObserver"></span>
               marketing
             </span>
             <h2 class="textos-medianos">
               <span class="span-grandes">
-                <span class="delay-3"></span>Quisquam</span
+                <span class="delay-3 intersectionObserver"></span>Quisquam</span
               >
               <span class="span-grandes">
-                <span class="delay-1"></span> perferendis soluta</span
+                <span class="delay-1 intersectionObserver"></span> perferendis
+                soluta</span
               >
               <span class="span-grandes">
-                <span class="delay-2"></span>repellat id</span
+                <span class="delay-2 intersectionObserver"></span>repellat
+                id</span
               >
             </h2>
             <p class="textos-comunes">
@@ -319,7 +337,7 @@
             </button>
           </div>
           <div class="imagenes-portfolio">
-            <span class="delay-1"></span>
+            <span class="delay-1 intersectionObserver"></span>
             <img
               loading="lazy"
               src="./images/woman-s-face-1988681.webp"
@@ -330,18 +348,21 @@
         <div class="cartas-portfolio">
           <div class="cartas-descripcion">
             <span class="mini-texto">
-              <span class="delay-1"></span>
+              <span class="delay-1 intersectionObserver"></span>
               ui-ux
             </span>
             <h2 class="textos-medianos">
               <span class="span-grandes">
-                <span class="delay-3"></span>Lorem ipsum</span
+                <span class="delay-3 intersectionObserver"></span>Lorem
+                ipsum</span
               >
               <span class="span-grandes">
-                <span class="delay-1"></span>dolor sit amet</span
+                <span class="delay-1 intersectionObserver"></span>dolor sit
+                amet</span
               >
               <span class="span-grandes">
-                <span class="delay-2"></span>consectetur.</span
+                <span class="delay-2 intersectionObserver"></span
+                >consectetur.</span
               >
             </h2>
             <p class="textos-comunes">
@@ -354,7 +375,7 @@
             </button>
           </div>
           <div class="imagenes-portfolio">
-            <span class="delay-1"></span>
+            <span class="delay-1 intersectionObserver"></span>
             <img
               loading="lazy"
               src="./images/woman-in-black-jacket-and-jeans-standing-beside-wall-with-3956803.webp"
@@ -368,13 +389,14 @@
       <header class="header-partners">
         <h2 class="titulos-grandes">
           <span class="span-grandes">
-            <span class="delay-1"></span>empresas</span
+            <span class="delay-1 intersectionObserver"></span>empresas</span
           >
           <span class="span-grandes">
-            <span class="delay-3"></span>con las que</span
+            <span class="delay-3 intersectionObserver"></span>con las que</span
           >
           <span class="span-grandes">
-            <span class="delay-2"></span>hemos trabajado</span
+            <span class="delay-2 intersectionObserver"></span>hemos
+            trabajado</span
           >
         </h2>
       </header>
@@ -602,13 +624,16 @@
           <div class="contenedor">
             <h2 class="textos-medianos">
               <span class="span-grandes">
-                <span class="delay-1"></span>Lorem ipsum</span
+                <span class="delay-1 intersectionObserver"></span>Lorem
+                ipsum</span
               >
               <span class="span-grandes">
-                <span class="delay-2"></span>dolor sit amet</span
+                <span class="delay-2 intersectionObserver"></span>dolor sit
+                amet</span
               >
               <span class="span-grandes">
-                <span class="delay-1"></span>consectetur.</span
+                <span class="delay-1 intersectionObserver"></span
+                >consectetur.</span
               >
             </h2>
             <div class="contenedor-tags">
@@ -643,13 +668,16 @@
           <div class="contenedor">
             <h2 class="textos-medianos">
               <span class="span-grandes">
-                <span class="delay-1"></span>Lorem ipsum</span
+                <span class="delay-1 intersectionObserver"></span>Lorem
+                ipsum</span
               >
               <span class="span-grandes">
-                <span class="delay-2"></span>dolor sit amet</span
+                <span class="delay-2 intersectionObserver"></span>dolor sit
+                amet</span
               >
               <span class="span-grandes">
-                <span class="delay-3"></span>consectetur.</span
+                <span class="delay-3 intersectionObserver"></span
+                >consectetur.</span
               >
             </h2>
             <div class="contenedor-tags">
@@ -684,13 +712,16 @@
           <div class="contenedor">
             <h2 class="textos-medianos">
               <span class="span-grandes">
-                <span class="delay-3"></span>Lorem ipsum</span
+                <span class="delay-3 intersectionObserver"></span>Lorem
+                ipsum</span
               >
               <span class="span-grandes">
-                <span class="delay-2"></span>dolor sit amet</span
+                <span class="delay-2 intersectionObserver"></span>dolor sit
+                amet</span
               >
               <span class="span-grandes">
-                <span class="delay-1"></span>consectetur.</span
+                <span class="delay-1 intersectionObserver"></span
+                >consectetur.</span
               >
             </h2>
             <div class="contenedor-tags">

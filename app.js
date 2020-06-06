@@ -50,25 +50,24 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   //API INTERSECTION OBSERVER PARA LOS EFECTOS DE LOS SPAN Y LAZY LOADING
+  //USO DE LA API EN VEZ DE EVENTLISTENER SCROLL PARA QUE SOLO ACTUE CUANDO ENTRA A LA VISTA
+  const secciones = document.querySelectorAll(".intersectionObserver");
 
-  const delayDos = document.getElementsByClassName("delay-2");
+  const options = {
+    root: null, //es el default, todo el viewport
+    threshold: 0.5, // 0 dispara en el momento que el elemento entra al observador, 1 dispara cuando todo el elemento ya esta dentro del observador
+  };
 
-  const delayTres = document.getElementsByClassName("delay-3");
-
-  const delayUno = document.getElementsByClassName("delay-1");
-
-  const disparador = document.querySelector("body");
-
-  disparador.addEventListener("click", function mover() {
-    for (var x = 0; x < delayUno.length; x++) {
-      delayUno[x].style.right = "-100%";
-    }
-    for (var x = 0; x < delayDos.length; x++) {
-      delayDos[x].style.right = "-100%";
-    }
-    for (var x = 0; x < delayTres.length; x++) {
-      delayTres[x].style.right = "-100%";
-    }
+  const observer = new IntersectionObserver(function (entries, observer) {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      } //si no esta en la pantalla, no hagas nada
+      entry.target.classList.add("derecha");
+    });
+  }, options);
+  secciones.forEach((section) => {
+    observer.observe(section);
   });
   let botonAbrir = document.querySelector(".boton-abrir");
   let botonCerrar = document.querySelector(".boton-cerrar");
@@ -77,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let cruzDos = document.querySelector(".cruz-02");
 
   botonAbrir.addEventListener("click", function abrir() {
-    menuDesplegable.style.right = "0";
+    menuDesplegable.style.right = "0px";
     if ((cruzUno.style.transform = "rotate(0)")) {
       cruzUno.style.transform = "rotate(135deg)";
       cruzDos.style.transform = "rotate(-135deg)";
