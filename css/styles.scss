@@ -53,7 +53,6 @@
   background-repeat: $repeat;
   background-position: $position;
 }
-
 //***************GLOBALES***********************//
 
 p {
@@ -147,7 +146,7 @@ img {
     padding: 1px 5px 1px 0;
     position: relative;
     display: inline-block;
-    overflow-x: hidden;
+    overflow: hidden;
   }
 }
 
@@ -174,6 +173,25 @@ img {
   .footer-home {
     padding: 90px 0;
   }
+}
+
+//SPANS EFECTO PARA API INTERSECTION OBSERVER
+.delay-1,
+.delay-2,
+.delay-3 {
+  right: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: white;
+  transition: 0.35s ease-in;
+  z-index: 5;
+}
+.delay-2 {
+  transition: 0.65s ease-in;
+}
+.delay-3 {
+  transition: 0.9s ease-in;
 }
 
 //*******************BOTONES******************//
@@ -207,6 +225,7 @@ img {
 .span-grandes {
   position: relative;
   overflow: hidden;
+  display: block;
 }
 
 //*****************ESTILOS DEL PARALLAX PRINCIPAL **************//
@@ -229,30 +248,19 @@ img {
 .img-02,
 .img-03 {
   @include background(cover, no-repeat, center);
-  filter: brightness(1.1);
 }
 
 //**************ESTILOS HEADER-PRINCIPAL*****************//
-.header-principal {
+.navegacion-principal {
   width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
-  position: relative;
-  .navegacion-principal {
-    width: 100%;
-    height: 45px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    @include flexbox(row, space-between, center);
-  }
-  .logo,
+  height: 45px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  @include flexbox(row, space-between, center);
+  .logo-contenedor,
   .hamburguesa {
-    font-size: 1.5rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: var(--color-base);
     padding: 0 5px;
     height: 100%;
     @include flexbox(column, center, center);
@@ -265,6 +273,21 @@ img {
       background: white;
       margin: 4px;
     }
+  }
+} //ALGUN OVERFLOW DE SWIPER.JS EN EL HEADER NO ME DEJA PONER EL NAV EN STICKY, POR ESO CLONARE EL NAV EN LA PRIMER SECCION Y LO HARE VISIBLE Y STICKY AL SCROLLEAR
+
+.header-principal {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  .logo {
+    font-size: 2rem;
+    font-family: "Orbitron", sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    color: red;
+    text-shadow: 1px 1px 1px black;
   }
   .swiper-container {
     width: 100%;
@@ -321,6 +344,85 @@ img {
     width: 100%;
   }
 }
+
+.menu-desplegable {
+  width: 100%;
+  height: 100vh;
+  background: black;
+  top: 0;
+  position: absolute;
+  right: -100%;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  transition-delay: 0.5s;
+  .navegacion-desplegable {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background: black;
+    .boton-cerrar {
+      width: 65px;
+      height: 100%;
+      @include flexbox(column, center, center);
+      position: relative;
+    }
+    .cruz {
+      background: white;
+      width: 50px;
+      height: 3px;
+      margin: 2px;
+      position: absolute;
+      transform: rotate(-45deg); //PARA LOGRAR UNA CRUZ CENTRADA
+    }
+    .cruz-02 {
+      transform: rotate(45deg);
+    } //EFECTO AL USAR LA API
+  }
+  .contenedor-imagen-descripcion {
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+  }
+  .imagen-desplegable {
+    display: none;
+    img {
+      width: 100%;
+      filter: opacity(0.7);
+    }
+  }
+
+  .descripcion-desplegable {
+    width: 100%;
+    height: 100%;
+    color: white;
+    @include flexbox(column, center, center);
+    .titulos-grandes {
+      color: white;
+      margin: 10px 0;
+      font-size: max(2rem);
+    }
+  }
+}
+//MEDIA QUERYS DE MENU-OCULTO
+
+//QUERYS 768PX
+
+@media (min-width: 768px) {
+  .menu-desplegable {
+    .imagen-desplegable {
+      display: flex;
+      width: 50%;
+      height: 100%;
+    }
+    .descripcion-desplegable {
+      width: 50%;
+    }
+  }
+}
+
 //MEDIA QUERYS HEADER-PRINCIPAL
 
 @media (min-width: 1024px) {
@@ -420,6 +522,11 @@ img {
 //************ESTILOS PORTFOLIO***********//
 .portfolio {
   background: var(--color-base);
+  .delay-1,
+  .delay-2,
+  .delay-3 {
+    background: var(--color-base);
+  }
   .cartas-portfolio {
     width: 100%;
     padding-bottom: 5px;
@@ -437,6 +544,11 @@ img {
     }
     .imagenes-portfolio {
       width: 100%;
+      position: relative;
+      overflow: hidden;
+      .delay-1 {
+        background: black;
+      }
     }
     .btn {
       margin-bottom: 10px;
@@ -480,12 +592,14 @@ img {
 .partners {
   .header-partners {
     padding: 0 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  .textos-medianos {
-    width: 60%;
+  .titulos-grandes {
     color: var(--color-textos-grandes);
     letter-spacing: 2px;
-    font-size: 1.65rem;
+    text-align: left;
   }
   .contenedor-compañias {
     width: 100%;
@@ -765,100 +879,6 @@ img {
     }
     .copy {
       flex-basis: 100%;
-    }
-  }
-}
-
-.delay-1,
-.delay-2,
-.delay-3 {
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: white;
-  transition: 0.35s ease-in;
-  z-index: 5;
-}
-.delay-2 {
-  transition: 0.65s ease-in;
-}
-.delay-3 {
-  transition: 0.95s ease-in;
-}
-.menu-desplegable {
-  width: 100%;
-  height: 100vh;
-  background: black;
-  top: 0;
-  position: absolute;
-  right: -100%;
-  z-index: 999999;
-  display: flex;
-  flex-direction: column;
-  transition-delay: 0.5s;
-  .navegacion-desplegable {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    background: black;
-    .boton-cerrar {
-      width: 65px;
-      height: 100%;
-      @include flexbox(column, center, center);
-      position: relative;
-    }
-    .cruz {
-      background: white;
-      width: 50px;
-      height: 3px;
-      margin: 2px;
-      position: absolute;
-      transform: rotate(-45deg); //PARA LOGRAR UNA CRUZ CENTRADA
-    }
-    .cruz-02 {
-      transform: rotate(45deg);
-    } //EFECTO AL USAR LA API
-  }
-  .contenedor-imagen-descripcion {
-    width: 100%;
-    height: calc(100% - 50px);
-    display: flex;
-  }
-  .imagen-desplegable {
-    display: none;
-    img {
-      width: 100%;
-    }
-  }
-
-  .descripcion-desplegable {
-    width: 100%;
-    height: 100%;
-    color: white;
-    @include flexbox(column, center, center);
-    .titulos-grandes {
-      color: white;
-      margin: 10px 0;
-      font-size: max(2rem);
-    }
-  }
-}
-//MEDIA QUERYS DDMENU-OCULTO
-
-//QUERYS 768PX
-
-@media (min-width: 768px) {
-  .menu-desplegable {
-    .imagen-desplegable {
-      display: flex;
-      width: 50%;
-      height: 100%;
-    }
-    .descripcion-desplegable {
-      width: 50%;
     }
   }
 }

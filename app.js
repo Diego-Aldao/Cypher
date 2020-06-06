@@ -61,13 +61,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   disparador.addEventListener("click", function mover() {
     for (var x = 0; x < delayUno.length; x++) {
-      delayUno[x].style.left = "600px";
+      delayUno[x].style.right = "-100%";
     }
     for (var x = 0; x < delayDos.length; x++) {
-      delayDos[x].style.left = "600px";
+      delayDos[x].style.right = "-100%";
     }
     for (var x = 0; x < delayTres.length; x++) {
-      delayTres[x].style.left = "600px";
+      delayTres[x].style.right = "-100%";
     }
   });
   let botonAbrir = document.querySelector(".boton-abrir");
