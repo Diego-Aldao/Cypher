@@ -96,7 +96,7 @@ img {
 .textos-comunes {
   letter-spacing: 1px;
   margin: 30px 0;
-  font-size: clamp(0.75rem, 1vw, 2rem);
+  font-size: clamp(0.75rem, 1vw, 1.5rem);
   line-height: 30px;
   color: #d4d4d4;
 }
@@ -104,7 +104,7 @@ img {
 .textos-medianos {
   font-family: var(--fuente-parrafos);
   text-align: left;
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
   width: 80%;
   letter-spacing: 1px;
   line-height: 30px;
@@ -122,7 +122,7 @@ img {
 .mini-texto {
   color: var(--color-textos-grandes);
   font-weight: 900;
-  font-size: 0.6rem;
+  font-size: clamp(0.6rem, 1vw, 1rem);
   display: inline-block;
   padding-right: 20px;
   margin-bottom: 5px;
@@ -467,6 +467,7 @@ img {
     .textos-comunes {
       margin: 0 0 30px 0;
       text-align: center;
+      max-width: 800px;
     }
   }
   span {
@@ -502,7 +503,7 @@ img {
       .textos-comunes {
         flex-basis: 50%;
         padding: 0 25px;
-        line-height: 40px;
+        line-height: 3;
         text-align: left;
       }
     }
@@ -512,11 +513,11 @@ img {
 //MEDIA QUERYS 1440PX
 
 @media (min-width: 1440px) {
+  .primer-seccion {
+    height: 1000px;
+  }
   .contenido-primer-seccion {
     margin-bottom: 100px;
-    .textos-comunes {
-      line-height: 50px;
-    }
   }
   .header-primer-seccion {
     height: 200px;
@@ -545,7 +546,7 @@ img {
     }
     .textos-comunes {
       color: #a0a0a0;
-      font-size: 0.75rem;
+      font-size: clamp(0.75rem, 1vh, 1.1rem);
     }
     .imagenes-portfolio {
       width: 100%;
@@ -575,9 +576,6 @@ img {
         flex-basis: 50%;
         @include flexbox(column, center, flex-start);
         padding: 0 0 0 30px;
-        .mini-texto {
-          width: 70px !important;
-        }
       }
       .imagenes-portfolio {
         flex-basis: 50%;
@@ -710,7 +708,6 @@ img {
       width: 100%;
       font-weight: 900;
       letter-spacing: 0;
-      font-size: 0.72rem;
       padding: 15px;
       margin: 0;
     }
@@ -742,6 +739,19 @@ img {
     background: red;
   }
 }
+//MEDIA QUERYS TESTIMONIOS
+
+//QUERYs 1440PX
+
+@media (min-width: 1440px) {
+  .testimonios {
+    .item-carrete {
+      .textos-comunes {
+        line-height: 3;
+      }
+    }
+  }
+}
 
 //*************************ESTILOS BLOG*****************//
 
@@ -757,6 +767,9 @@ img {
       margin-bottom: 25px;
       width: 100%;
     }
+    .span-grandes {
+      margin-bottom: 4px;
+    }
     .tags-blog {
       display: flex;
       flex-wrap: wrap;
@@ -765,19 +778,15 @@ img {
       .icono-tag {
         width: 25px;
         @include flexbox(row, center, center);
-        font-size: 0.85rem;
         color: var(--color-textos-grandes);
+        font-family: var(--fuente-parrafos);
+        letter-spacing: 2px;
       }
       li {
-        font-size: 0.7rem;
+        font-size: clamp(0.6rem, 0.7vw, 1rem);
         padding: 0 10px;
         color: rgb(104, 104, 104);
       }
-    }
-    .textos-comunes {
-      font-family: var(--fuente-parrafos);
-      font-size: 0.55rem;
-      letter-spacing: 2px;
     }
     .footer-cartas {
       width: 100%;
@@ -813,10 +822,13 @@ img {
 
 //ESTILOS FOOTER-HOME
 .footer-home {
+  background: var(--fondo-obscuro);
   font-family: var(--fuente-parrafos);
   font-size: 0.95rem;
   color: var(--color-base);
   padding-top: 80px;
+  position: relative;
+  z-index: 99999999;
   .contenedor {
     max-width: 1400px;
   }
@@ -842,22 +854,32 @@ img {
   }
   .contacto-footer {
     margin-bottom: 50px;
-    height: 150px;
     @include flexbox(column, space-evenly, space-evenly);
     .mail,
     .telefono,
     .direccion {
-      @include flexbox(row, center, center);
+      @include flexbox(row, flex-start, center);
       font-size: 0.7rem;
+      margin: 5px;
+      width: 70%;
+      margin: 10px auto;
+
+      line-height: 25px;
+      height: 35px;
       i {
-        margin: 0px 10px;
+        height: 100%;
+        width: 20%;
+        font-size: 1rem;
+        @include flexbox(row, center, center);
+      }
+      p {
+        width: 80%;
       }
     }
-    .direccion {
-      width: 70%;
-      margin: 0 auto;
-      line-height: 25px;
+    .titulos-medianos {
+      color: var(--color-textos-grandes);
       text-align: center;
+      margin-bottom: 15px;
     }
   }
   .redes-sociales {
