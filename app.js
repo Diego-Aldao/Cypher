@@ -62,12 +62,12 @@ document.addEventListener("DOMContentLoaded", function () {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) {
         return;
-      } //si no esta en la pantalla, no hagas nada
+      } //si no esta en la pantalla, termina la funcion
       entry.target.classList.add("derecha");
     });
   }, options);
   secciones.forEach((section) => {
-    observer.observe(section);
+    observer.observe(section); //al usar querySelectorAll tengo un array con las secciones, y lo que quiero lograr es observar uno por uno
   });
   let botonAbrir = document.querySelector(".boton-abrir");
   let botonCerrar = document.querySelector(".boton-cerrar");

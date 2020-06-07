@@ -55,10 +55,6 @@
 }
 //***************GLOBALES***********************//
 
-p {
-  font-size: 0.8rem;
-}
-
 body {
   overflow-x: hidden;
   width: 100%;
@@ -81,8 +77,7 @@ img {
 }
 
 .textos-comunes,
-.textos-medianos,
-.parrafos-rojos {
+.textos-medianos {
   font-weight: 600;
 }
 
@@ -113,7 +108,7 @@ img {
 .pie-titulo {
   text-align: center;
   margin-top: 5px;
-  font-size: 0.6rem;
+  font-size: clamp(0.6rem, 1.1vw, 1.1rem);
   font-weight: 900;
   letter-spacing: 0.7px;
   transform: scale(1, 1.1);
@@ -142,12 +137,8 @@ img {
   color: var(--color-textos-grandes);
   letter-spacing: 1px;
   margin: 0px 0px 70px 8px;
-  .parrafos-rojos {
-    background: var(--fondo-obscuro);
-    padding: 1px 5px 1px 0;
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
+  .span-grandes {
+    font-size: clamp(0.7rem, 1vw, 2rem);
   }
 }
 
@@ -266,9 +257,9 @@ img {
   position: fixed; //SOLUCIONO EL PROBLEMA CON STICKY
   top: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 7;
   @include flexbox(row, space-between, center);
-  background: black;
+  background: var(--fondo-obscuro);
   .logo-contenedor,
   .hamburguesa {
     padding: 0 5px;
@@ -311,6 +302,15 @@ img {
       width: 320px;
       margin: 120px 0 20px 8px;
       text-align: left;
+      .span-grandes:nth-child(1) {
+        padding-right: 0px;
+      }
+      .span-grandes:nth-child(2) {
+        padding-right: 55px;
+      }
+      .span-grandes:nth-child(3) {
+        padding-right: 45px;
+      }
     }
     .span-grandes {
       position: relative;
@@ -320,9 +320,7 @@ img {
       display: inline-block;
       overflow: hidden;
     }
-    .span-grandes:last-of-type {
-      padding-right: 45px;
-    }
+
     .btn {
       width: 200px;
       align-self: flex-start;
@@ -356,7 +354,7 @@ img {
   display: flex;
   background: black;
   top: 0;
-  z-index: 99999;
+  z-index: 9;
   flex-direction: column;
   transition-delay: 0.5s;
   .navegacion-desplegable {
@@ -405,7 +403,7 @@ img {
     .titulos-grandes {
       color: white;
       margin: 10px 0;
-      font-size: max(2rem);
+      font-size: max(1.8rem);
     }
   }
 }
@@ -470,24 +468,18 @@ img {
       max-width: 800px;
     }
   }
-  span {
-    padding: 3px 5px 3px 0;
-  }
+
   .lista-primer-seccion {
     @include flexbox(row, center, center);
     flex-wrap: wrap;
     height: 50px;
     color: var(--color-base);
     li {
-      flex-basis: 80px;
       margin: 5px 15px;
       text-align: center;
     }
     .textos-comunes {
       margin: 0;
-      font-weight: 600;
-      letter-spacing: 1px;
-      font-size: 0.75rem;
     }
   }
 }
@@ -503,8 +495,8 @@ img {
       .textos-comunes {
         flex-basis: 50%;
         padding: 0 25px;
-        line-height: 3;
-        text-align: left;
+        line-height: 4;
+        text-align: center;
       }
     }
   }
@@ -513,14 +505,15 @@ img {
 //MEDIA QUERYS 1440PX
 
 @media (min-width: 1440px) {
-  .primer-seccion {
-    height: 1000px;
-  }
   .contenido-primer-seccion {
     margin-bottom: 100px;
+    .textos-comunes {
+      margin: 0 40px;
+      text-align: justify;
+    }
   }
   .header-primer-seccion {
-    height: 200px;
+    margin: 80px 0;
   }
 }
 
@@ -640,13 +633,6 @@ img {
 //MEDIA QUERY 768PX
 @media (min-width: 768px) {
   .partners {
-    .header-partners {
-      padding: 0 15px;
-      .textos-medianos {
-        font-size: 2.3rem;
-        line-height: 50px;
-      }
-    }
     .contenedor-compañias {
       .compañia-item {
         flex-basis: 25%;
@@ -822,13 +808,10 @@ img {
 
 //ESTILOS FOOTER-HOME
 .footer-home {
+  padding-bottom: 0;
   background: var(--fondo-obscuro);
   font-family: var(--fuente-parrafos);
-  font-size: 0.95rem;
   color: var(--color-base);
-  padding-top: 80px;
-  position: relative;
-  z-index: 99999999;
   .contenedor {
     max-width: 1400px;
   }
@@ -843,8 +826,8 @@ img {
   }
   .nav-footer,
   .redes-sociales {
+    @include flexbox(column, space-evenly, center);
     font-weight: 900;
-    height: 200px;
     margin-bottom: 50px;
     ul {
       height: 100%;
@@ -854,41 +837,36 @@ img {
   }
   .contacto-footer {
     margin-bottom: 50px;
-    @include flexbox(column, space-evenly, space-evenly);
     .mail,
     .telefono,
     .direccion {
-      @include flexbox(row, flex-start, center);
-      font-size: 0.7rem;
+      @include flexbox(row, center, center);
       margin: 5px;
-      width: 70%;
+      width: 100%;
       margin: 10px auto;
-
-      line-height: 25px;
-      height: 35px;
       i {
         height: 100%;
         width: 20%;
-        font-size: 1rem;
         @include flexbox(row, center, center);
       }
       p {
         width: 80%;
       }
     }
-    .titulos-medianos {
-      color: var(--color-textos-grandes);
-      text-align: center;
-      margin-bottom: 15px;
-    }
-  }
-  .redes-sociales {
-    font-weight: 500;
-    letter-spacing: 1px;
-    font-size: 0.8rem;
   }
   .copy {
+    @include flexbox(row, center, center);
+  }
+  .textos-medianos {
+    color: var(--color-textos-grandes);
     text-align: center;
+    margin: 0 auto 20px;
+    padding: 15px 0;
+  }
+  .textos-comunes {
+    margin: 5px 0;
+    font-size: clamp(0.9rem, 1.3vw, 1.7rem);
+    color: white;
   }
 }
 
@@ -903,13 +881,10 @@ img {
       flex-direction: row;
       flex-wrap: wrap;
     }
-    .logo-footer,
     .nav-footer,
-    .redes-sociales {
-      flex-basis: 20%;
-    }
+    .redes-sociales,
     .contacto-footer {
-      flex-basis: 40%;
+      flex-basis: 33%;
     }
     .copy {
       flex-basis: 100%;

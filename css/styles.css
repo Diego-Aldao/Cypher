@@ -39,10 +39,6 @@
   --fuente-parrafos: "Oswald", sans-serif;
 }
 
-p {
-  font-size: 0.8rem;
-}
-
 body {
   overflow-x: hidden;
   width: 100%;
@@ -65,8 +61,7 @@ img {
 }
 
 .textos-comunes,
-.textos-medianos,
-.parrafos-rojos {
+.textos-medianos {
   font-weight: 600;
 }
 
@@ -97,7 +92,7 @@ img {
 .pie-titulo {
   text-align: center;
   margin-top: 5px;
-  font-size: 0.6rem;
+  font-size: clamp(0.6rem, 1.1vw, 1.1rem);
   font-weight: 900;
   letter-spacing: 0.7px;
   -webkit-transform: scale(1, 1.1);
@@ -130,12 +125,8 @@ img {
   margin: 0px 0px 70px 8px;
 }
 
-.contenedor-parrafos-rojos .parrafos-rojos {
-  background: var(--fondo-obscuro);
-  padding: 1px 5px 1px 0;
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
+.contenedor-parrafos-rojos .span-grandes {
+  font-size: clamp(0.7rem, 1vw, 2rem);
 }
 
 .header-primer-seccion,
@@ -273,7 +264,7 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -287,7 +278,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: black;
+  background: var(--fondo-obscuro);
 }
 
 .navegacion-principal .logo-contenedor,
@@ -366,6 +357,18 @@ img {
   text-align: left;
 }
 
+.header-principal .contenido .titulos-grandes .span-grandes:nth-child(1) {
+  padding-right: 0px;
+}
+
+.header-principal .contenido .titulos-grandes .span-grandes:nth-child(2) {
+  padding-right: 55px;
+}
+
+.header-principal .contenido .titulos-grandes .span-grandes:nth-child(3) {
+  padding-right: 45px;
+}
+
 .header-principal .contenido .span-grandes {
   position: relative;
   padding: 1px 15px 1px 0;
@@ -373,10 +376,6 @@ img {
   margin: 2px 0;
   display: inline-block;
   overflow: hidden;
-}
-
-.header-principal .contenido .span-grandes:last-of-type {
-  padding-right: 45px;
 }
 
 .header-principal .contenido .btn {
@@ -419,7 +418,7 @@ img {
   display: flex;
   background: black;
   top: 0;
-  z-index: 99999;
+  z-index: 9;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -515,7 +514,7 @@ img {
 .menu-desplegable .descripcion-desplegable .titulos-grandes {
   color: white;
   margin: 10px 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 @media (min-width: 768px) {
@@ -595,10 +594,6 @@ img {
   max-width: 800px;
 }
 
-.primer-seccion span {
-  padding: 3px 5px 3px 0;
-}
-
 .primer-seccion .lista-primer-seccion {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -620,17 +615,12 @@ img {
 }
 
 .primer-seccion .lista-primer-seccion li {
-  -ms-flex-preferred-size: 80px;
-      flex-basis: 80px;
   margin: 5px 15px;
   text-align: center;
 }
 
 .primer-seccion .lista-primer-seccion .textos-comunes {
   margin: 0;
-  font-weight: 600;
-  letter-spacing: 1px;
-  font-size: 0.75rem;
 }
 
 @media (min-width: 768px) {
@@ -644,20 +634,21 @@ img {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     padding: 0 25px;
-    line-height: 3;
-    text-align: left;
+    line-height: 4;
+    text-align: center;
   }
 }
 
 @media (min-width: 1440px) {
-  .primer-seccion {
-    height: 1000px;
-  }
   .contenido-primer-seccion {
     margin-bottom: 100px;
   }
+  .contenido-primer-seccion .textos-comunes {
+    margin: 0 40px;
+    text-align: justify;
+  }
   .header-primer-seccion {
-    height: 200px;
+    margin: 80px 0;
   }
 }
 
@@ -836,13 +827,6 @@ img {
 }
 
 @media (min-width: 768px) {
-  .partners .header-partners {
-    padding: 0 15px;
-  }
-  .partners .header-partners .textos-medianos {
-    font-size: 2.3rem;
-    line-height: 50px;
-  }
   .partners .contenedor-compañias .compañia-item {
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
@@ -1093,13 +1077,10 @@ img {
 }
 
 .footer-home {
+  padding-bottom: 0;
   background: var(--fondo-obscuro);
   font-family: var(--fuente-parrafos);
-  font-size: 0.95rem;
   color: var(--color-base);
-  padding-top: 80px;
-  position: relative;
-  z-index: 99999999;
 }
 
 .footer-home .contenedor {
@@ -1131,8 +1112,20 @@ img {
 
 .footer-home .nav-footer,
 .footer-home .redes-sociales {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: 900;
-  height: 200px;
   margin-bottom: 50px;
 }
 
@@ -1157,19 +1150,6 @@ img {
 
 .footer-home .contacto-footer {
   margin-bottom: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: space-evenly;
-      -ms-flex-align: space-evenly;
-          align-items: space-evenly;
 }
 
 .footer-home .contacto-footer .mail,
@@ -1182,18 +1162,15 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 0.7rem;
   margin: 5px;
-  width: 70%;
+  width: 100%;
   margin: 10px auto;
-  line-height: 25px;
-  height: 35px;
 }
 
 .footer-home .contacto-footer .mail i,
@@ -1201,7 +1178,6 @@ img {
 .footer-home .contacto-footer .direccion i {
   height: 100%;
   width: 20%;
-  font-size: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1223,20 +1199,33 @@ img {
   width: 80%;
 }
 
-.footer-home .contacto-footer .titulos-medianos {
+.footer-home .copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-home .textos-medianos {
   color: var(--color-textos-grandes);
   text-align: center;
-  margin-bottom: 15px;
+  margin: 0 auto 20px;
+  padding: 15px 0;
 }
 
-.footer-home .redes-sociales {
-  font-weight: 500;
-  letter-spacing: 1px;
-  font-size: 0.8rem;
-}
-
-.footer-home .copy {
-  text-align: center;
+.footer-home .textos-comunes {
+  margin: 5px 0;
+  font-size: clamp(0.9rem, 1.3vw, 1.7rem);
+  color: white;
 }
 
 @media (min-width: 768px) {
@@ -1254,15 +1243,11 @@ img {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .footer-home .logo-footer,
   .footer-home .nav-footer,
-  .footer-home .redes-sociales {
-    -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
-  }
+  .footer-home .redes-sociales,
   .footer-home .contacto-footer {
-    -ms-flex-preferred-size: 40%;
-        flex-basis: 40%;
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
   }
   .footer-home .copy {
     -ms-flex-preferred-size: 100%;
