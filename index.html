@@ -30,7 +30,7 @@
     <title>Cypher</title>
   </head>
   <body>
-    <header class="header-principal">
+    <header id="inicio" class="header-principal">
       <nav class="navegacion-principal">
         <div class="logo-contenedor"><p class="logo">cypher</p></div>
         <div class="hamburguesa boton-abrir">
@@ -53,12 +53,24 @@
               />
             </div>
             <div class="descripcion-desplegable">
-              <span class="titulos-grandes">inicio</span>
-              <span class="titulos-grandes">servicios</span>
-              <span class="titulos-grandes">portfolio</span>
-              <span class="titulos-grandes">tienda</span>
-              <span class="titulos-grandes">blog</span>
-              <span class="titulos-grandes">contacto</span>
+              <span class="titulos-grandes links hover"
+                ><a href="#inicio">inicio</a></span
+              >
+              <span class="titulos-grandes links hover"
+                ><a href="#servicios">servicios</a></span
+              >
+              <span class="titulos-grandes links hover"
+                ><a href="#portfolio">portfolio</a></span
+              >
+              <span class="titulos-grandes links hover"
+                ><a href="#partners">partners</a></span
+              >
+              <span class="titulos-grandes links hover"
+                ><a href="#blog">blog</a></span
+              >
+              <span class="titulos-grandes links hover"
+                ><a href="#contacto">contacto</a>
+              </span>
             </div>
           </div>
         </div>
@@ -75,11 +87,13 @@
                     <span class="delay-1 intersectionObserver"></span>
                     creamos ideas</span
                   >
+                  <br />
 
                   <span class="span-grandes">
                     <span class="delay-2 intersectionObserver"></span>
                     creativas e</span
                   >
+                  <br />
                   <span class="span-grandes">
                     <span class="delay-3 intersectionObserver"></span>
                     innovadoras</span
@@ -102,22 +116,44 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide segundo-slide">
             <div class="parallax-bg img-02" data-swiper-parallax="55%"></div>
             <div class="contenido">
               <div data-swiper-parallax="-300">
                 <h1 class="titulos-grandes">
                   <span class="span-grandes">
-                    <span class="delay-1 intersectionObserver"></span>
-                    mejores soluciones</span
+                    <span
+                      class="delay-1 delay-rojo intersectionObserver"
+                    ></span>
+                    bienvenido a cypher</span
                   >
+                  <br />
                   <span class="span-grandes">
-                    <span class="delay-2 intersectionObserver"></span>e
-                    ideas</span
+                    <span
+                      class="delay-1 delay-blanco intersectionObserver"
+                    ></span>
+                    mejores</span
                   >
+                  <br />
                   <span class="span-grandes">
-                    <span class="delay-3 intersectionObserver"></span>para tu
-                    negocio</span
+                    <span
+                      class="delay-1 delay-blanco intersectionObserver"
+                    ></span>
+                    soluciones</span
+                  >
+                  <br />
+                  <span class="span-grandes">
+                    <span
+                      class="delay-2 delay-blanco intersectionObserver"
+                    ></span
+                    >e ideas</span
+                  >
+                  <br />
+                  <span class="span-grandes">
+                    <span
+                      class="delay-3 delay-blanco intersectionObserver"
+                    ></span
+                    >para tu negocio</span
                   >
                 </h1>
               </div>
@@ -145,22 +181,27 @@
                   <span class="span-grandes">
                     <span class="delay-1 intersectionObserver"></span>proveemos
                   </span>
+                  <br />
                   <span class="span-grandes">
                     <span class="delay-2 intersectionObserver"></span>los
                     mejores</span
                   >
+                  <br />
                   <span class="span-grandes">
                     <span class="delay-3 intersectionObserver"></span>servicios
-                    digitales</span
-                  >
+                  </span>
+                  <br />
+                  <span class="span-grandes">
+                    <span class="delay-3 intersectionObserver"></span>digitales
+                  </span>
                 </h1>
               </div>
               <div data-swiper-parallax="-200">
                 <p class="contenedor-parrafos-rojos">
-                  <span class="parrafos-rojos">
+                  <span class="span-grandes">
                     <span class="delay-1 intersectionObserver"></span>Lorem,
                     ipsum dolor.</span
-                  ><span class="parrafos-rojos"
+                  ><span class="span-grandes"
                     ><span class="delay-2 intersectionObserver"></span>Cum
                     molestias velit ut veritatis</span
                   >
@@ -175,7 +216,7 @@
         <div class="swiper-pagination"></div>
       </div>
     </header>
-    <section class="primer-seccion">
+    <section id="servicios" class="primer-seccion">
       <div class="contenedor">
         <header class="header-primer-seccion">
           <h1 class="titulos-grandes">
@@ -221,7 +262,7 @@
         </ul>
       </div>
     </section>
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
       <div class="contenedor">
         <header class="header-portfolio">
           <h1 class="titulos-grandes">trabajos recientes</h1>
@@ -384,7 +425,7 @@
         </div>
       </div>
     </section>
-    <section class="partners">
+    <section id="partners" class="partners">
       <header class="header-partners">
         <h2 class="titulos-grandes">
           <span class="span-grandes">
@@ -604,7 +645,7 @@
         <div class="swiper-puntitos"></div>
       </div>
     </section>
-    <section class="blog">
+    <section id="blog" class="blog">
       <div class="contenedor">
         <header class="header-blog">
           <h1 class="titulos-grandes">
@@ -754,14 +795,14 @@
         <div class="nav-footer">
           <h1 class="textos-medianos">menu</h1>
           <ul>
-            <li class="textos-comunes">inicio</li>
-            <li class="textos-comunes">servicios</li>
-            <li class="textos-comunes">portfolio</li>
-            <li class="textos-comunes">tienda</li>
-            <li class="textos-comunes">blog</li>
+            <li class="textos-comunes"><a href="#inicio">inicio</a></li>
+            <li class="textos-comunes"><a href="#servicios">servicios</a></li>
+            <li class="textos-comunes"><a href="#portfolio">portfolio</a></li>
+            <li class="textos-comunes"><a href="#partners">partners</a></li>
+            <li class="textos-comunes"><a href="#blog">blog</a></li>
           </ul>
         </div>
-        <div class="contacto-footer">
+        <div id="contacto" class="contacto-footer">
           <h1 class="textos-medianos">contacto</h1>
           <div class="mail">
             <i class="far fa-envelope"></i>

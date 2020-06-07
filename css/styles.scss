@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   transition: all 0.5s ease-in-out;
+  scroll-behavior: smooth;
 }
 
 /*INDICE
@@ -68,7 +69,14 @@ body {
 img {
   max-width: 100%;
   max-height: 100%;
-} //IMAGENES RESPONSIVE
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: none;
+  outline: none;
+}
 
 .contenedor {
   width: 95%;
@@ -129,17 +137,8 @@ img {
 .titulos-grandes {
   font-family: var(--fuente-parrafos);
   text-align: center;
-  font-size: clamp(2rem, 5.5vw, 5rem);
+  font-size: clamp(2rem, 4.5vw, 5rem);
   letter-spacing: -1px;
-}
-
-.contenedor-parrafos-rojos {
-  color: var(--color-textos-grandes);
-  letter-spacing: 1px;
-  margin: 0px 0px 70px 8px;
-  .span-grandes {
-    font-size: clamp(0.7rem, 1vw, 2rem);
-  }
 }
 
 .header-primer-seccion,
@@ -187,7 +186,10 @@ img {
 }
 
 //*******************BOTONES******************//
-
+.btn,
+.btn-secundario {
+  cursor: pointer;
+}
 .btn {
   color: var(--color-textos-grandes);
   border: 1px solid var(--color-textos-grandes);
@@ -199,17 +201,28 @@ img {
   letter-spacing: 3px;
   font-weight: 600;
 }
-
+.btn:hover {
+  border: 1px solid var(--color-base);
+  color: white;
+}
 .btn-secundario {
   background: var(--fondo-obscuro);
   color: var(--color-base);
   border: none;
   padding: 20px 30px;
   font-size: 0.9rem;
-  margin-bottom: 55px;
+  height: 56px;
   @include flexbox(row, space-evenly, center);
   i {
     margin-left: 15px;
+  }
+}
+.btn-secundario:hover {
+  background: var(--color-textos-grandes);
+  color: var(--fondo-obscuro);
+  transition-delay: 0;
+  i {
+    margin-left: 35px;
   }
 }
 
@@ -250,6 +263,7 @@ img {
   font-weight: bold;
   color: red;
   text-shadow: 1px 1px 1px black;
+  cursor: pointer;
 }
 .navegacion-principal {
   width: 100%;
@@ -275,6 +289,9 @@ img {
       margin: 4px;
     }
   }
+  .hamburguesa:hover span {
+    background: var(--color-textos-grandes);
+  }
 } //ALGUN OVERFLOW DE SWIPER.JS EN EL HEADER NO ME DEJA PONER EL NAV EN STICKY, POR ESO CLONARE EL NAV EN LA PRIMER SECCION Y LO HARE VISIBLE Y STICKY AL SCROLLEAR
 
 .header-principal {
@@ -292,41 +309,6 @@ img {
     height: 100%;
     overflow: hidden;
   }
-  .contenido {
-    width: 100%;
-    height: 100%;
-    @include flexbox(column, center, flex-start);
-    position: relative;
-    .titulos-grandes {
-      color: var(--color-textos-grandes);
-      width: 320px;
-      margin: 120px 0 20px 8px;
-      text-align: left;
-      .span-grandes:nth-child(1) {
-        padding-right: 0px;
-      }
-      .span-grandes:nth-child(2) {
-        padding-right: 55px;
-      }
-      .span-grandes:nth-child(3) {
-        padding-right: 45px;
-      }
-    }
-    .span-grandes {
-      position: relative;
-      padding: 1px 15px 1px 0;
-      background: var(--fondo-obscuro);
-      margin: 2px 0;
-      display: inline-block;
-      overflow: hidden;
-    }
-
-    .btn {
-      width: 200px;
-      align-self: flex-start;
-      margin-left: 8px;
-    }
-  }
 
   .swiper-pagination-bullet {
     background: white;
@@ -335,14 +317,93 @@ img {
   .swiper-pagination-bullet-active {
     background-color: var(--color-textos-grandes);
     transform: scale(1.5);
-    margin: 0 15px !important;
+    margin: 0 25px !important;
+  }
+  @media (min-width: 1440px) {
+    .swiper-pagination-bullet {
+      height: 10px;
+      width: 10px;
+    }
+    .swiper-pagination-bullet-active {
+      margin: 0 45px !important;
+    }
   }
 
   .swiper-pagination {
-    display: flex;
-    justify-content: flex-end;
+    @include flexbox(row, flex-end, center);
     padding-right: 20px;
     width: 100%;
+  }
+}
+.contenido {
+  width: 100%;
+  height: 100%;
+  @include flexbox(column, center, flex-start);
+  position: relative;
+  .titulos-grandes {
+    color: var(--color-textos-grandes);
+    margin: 120px 0 20px 8px;
+    text-align: left;
+  }
+  .span-grandes {
+    background: var(--fondo-obscuro);
+    display: inline-block;
+    padding-right: 20px;
+  }
+  .span-grandes:nth-child(1) {
+    padding-right: 15px;
+  }
+  .span-grandes:nth-child(2) {
+    padding-right: 55px;
+  }
+  .span-grandes:nth-child(3) {
+    padding-right: 45px;
+  }
+
+  .btn {
+    width: 200px;
+    align-self: flex-start;
+    margin-left: 8px;
+  }
+}
+.segundo-slide {
+  .span-grandes {
+    background: var(--fondo-obscuro);
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  .span-grandes:nth-child(1) {
+    color: var(--color-textos-grandes);
+  }
+  .delay-blanco {
+    background: white;
+    color: white;
+  }
+  .delay-rojo {
+    background: var(--color-textos-grandes);
+  }
+  .btn-principal:hover {
+    color: var(--fondo-obscuro);
+    border: 1px solid var(--fondo-obscuro);
+  }
+}
+.contenedor-parrafos-rojos {
+  letter-spacing: 1px;
+  margin: 0px 0px 70px 8px;
+  .span-grandes {
+    color: var(--color-textos-grandes);
+    font-size: clamp(0.7rem, 1vw, 2rem);
+    padding: 2px 0;
+    font-weight: 900;
+  }
+}
+@media (min-width: 768px) {
+  .segundo-slide {
+    .btn-principal:hover {
+      color: white;
+      border: 1px solid white;
+    }
   }
 }
 
@@ -351,19 +412,16 @@ img {
   width: 100%;
   height: 100vh;
   right: -200%;
-  display: flex;
-  background: black;
+  @include flexbox(column, center, center);
+  background: var(--fondo-obscuro);
   top: 0;
   z-index: 9;
-  flex-direction: column;
   transition-delay: 0.5s;
   .navegacion-desplegable {
     width: 100%;
     height: 50px;
-    display: flex;
-    justify-content: space-between;
+    @include flexbox(row, space-between, center);
     position: relative;
-    background: black;
     .boton-cerrar {
       width: 65px;
       height: 100%;
@@ -398,12 +456,15 @@ img {
   .descripcion-desplegable {
     width: 100%;
     height: 100%;
-    color: white;
     @include flexbox(column, center, center);
     .titulos-grandes {
-      color: white;
       margin: 10px 0;
       font-size: max(1.8rem);
+      color: white;
+      cursor: pointer;
+    }
+    .titulos-grandes:hover {
+      color: var(--color-textos-grandes);
     }
   }
 }
@@ -426,19 +487,21 @@ img {
 
 //MEDIA QUERYS HEADER-PRINCIPAL
 
+//QUERYS 768px
+
 @media (min-width: 1024px) {
   .header-principal {
     .parallax-bg {
       width: 50%;
     }
-    .contenido {
-      position: relative;
-      width: 50%;
-      margin-left: auto;
-      padding: 0 15px;
-      .titulos-grandes {
-        width: 100%;
-      }
+  }
+  .contenido {
+    position: relative;
+    width: 50%;
+    margin-left: auto;
+    padding: 0 15px;
+    .titulos-grandes {
+      width: 100%;
     }
   }
 }
@@ -453,10 +516,7 @@ img {
   }
   .titulos-grandes {
     color: var(--color-textos-grandes);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexbox(column, center, center);
   }
   .contenido-primer-seccion {
     width: 100%;
@@ -526,32 +586,32 @@ img {
   .delay-3 {
     background: var(--color-base);
   }
-  .cartas-portfolio {
+}
+.cartas-portfolio {
+  width: 100%;
+  padding-bottom: 5px;
+  margin-bottom: 55px;
+  .textos-medianos {
+    width: 60%;
+    @include flexbox(column, center, flex-start);
+  }
+  .textos-comunes {
+    color: #a0a0a0;
+    font-size: clamp(0.75rem, 1vh, 1.1rem);
+  }
+  .imagenes-portfolio {
     width: 100%;
-    padding-bottom: 5px;
-    margin-bottom: 55px;
-    .textos-medianos {
-      width: 60%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: left;
+    position: relative;
+    overflow: hidden;
+    .delay-1 {
+      background: var(--fondo-obscuro);
     }
-    .textos-comunes {
-      color: #a0a0a0;
-      font-size: clamp(0.75rem, 1vh, 1.1rem);
-    }
-    .imagenes-portfolio {
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-      .delay-1 {
-        background: black;
-      }
-    }
-    .btn {
-      margin-bottom: 10px;
-    }
+  }
+  .imagenes-portfolio:hover img {
+    transform: scale(1.2);
+  }
+  .btn {
+    margin-bottom: 10px;
   }
 }
 
@@ -564,7 +624,6 @@ img {
       max-width: 1000px;
       display: flex;
       flex-direction: row-reverse;
-
       .cartas-descripcion {
         flex-basis: 50%;
         @include flexbox(column, center, flex-start);
@@ -588,9 +647,7 @@ img {
 .partners {
   .header-partners {
     padding: 0 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    @include flexbox(column, center, flex-start);
   }
   .titulos-grandes {
     color: var(--color-textos-grandes);
@@ -599,9 +656,8 @@ img {
   }
   .contenedor-compañias {
     width: 100%;
-    display: flex;
+    @include flexbox(row, center, center);
     flex-wrap: wrap;
-    justify-content: center;
     width: 95%;
     margin: 0 auto;
   }
@@ -654,7 +710,7 @@ img {
 
 //***************ESTILOS TESTIMONIOS**************//
 .testimonios {
-  background: var(--color-base);
+  background: var(--fondo-obscuro);
   overflow-x: hidden;
   .item-carrete {
     overflow: hidden;
@@ -703,17 +759,16 @@ img {
       height: 25px;
       text-align: center;
       .mini-texto {
-        color: var(--fondo-obscuro);
+        color: var(--color-base);
         font-family: var(--fuente-parrafos);
       }
       span {
-        color: rgb(122, 122, 122);
+        color: rgb(151, 151, 151);
       }
     }
   }
   //Estilos Swiper Testimonios
   .swiper-pagination-bullet-active {
-    background-color: var(--fondo-obscuro);
     transform: scale(1.5);
     margin: 0 15px !important;
     //no encontre la manera de ponerle el margin sin el important, seguro tiene un parent que no veo
@@ -722,7 +777,7 @@ img {
     @include flexbox(row, center, center);
   }
   .swiper-pagination-bullet {
-    background: red;
+    background: rgb(255, 255, 255);
   }
 }
 //MEDIA QUERYS TESTIMONIOS
@@ -743,47 +798,49 @@ img {
 
 .blog {
   background: var(--color-base);
-  .cartas-blog {
-    margin: 0 auto 50px;
-    @include flexbox(column, center, center);
-    max-width: 500px;
-    background: rgb(238, 238, 238);
-    padding-bottom: 25px;
-    .contenedor-imagen-blog {
-      margin-bottom: 25px;
-      width: 100%;
-    }
-    .span-grandes {
-      margin-bottom: 4px;
-    }
-    .tags-blog {
-      display: flex;
-      flex-wrap: wrap;
-      list-style: none;
-      @include flexbox(row, flex-start, center);
-      .icono-tag {
-        width: 25px;
-        @include flexbox(row, center, center);
-        color: var(--color-textos-grandes);
-        font-family: var(--fuente-parrafos);
-        letter-spacing: 2px;
-      }
-      li {
-        font-size: clamp(0.6rem, 0.7vw, 1rem);
-        padding: 0 10px;
-        color: rgb(104, 104, 104);
-      }
-    }
-    .footer-cartas {
-      width: 100%;
-      height: 25px;
-      @include flexbox(row, space-between, center);
-    }
-  }
   .delay-1,
   .delay-2,
   .delay-3 {
     background: rgb(238, 238, 238);
+  }
+}
+.cartas-blog {
+  margin: 0 auto 50px;
+  @include flexbox(column, center, center);
+  max-width: 500px;
+  background: rgb(238, 238, 238);
+  padding-bottom: 25px;
+  .contenedor-imagen-blog {
+    margin-bottom: 25px;
+    width: 100%;
+  }
+  .span-grandes {
+    margin-bottom: 4px;
+  }
+  .tags-blog {
+    flex-wrap: wrap;
+    list-style: none;
+    @include flexbox(row, flex-start, center);
+    .icono-tag {
+      width: 25px;
+      @include flexbox(row, center, center);
+      color: var(--color-textos-grandes);
+      font-family: var(--fuente-parrafos);
+      letter-spacing: 2px;
+    }
+    li {
+      font-size: clamp(0.6rem, 0.7vw, 1rem);
+      padding: 0 10px;
+      color: rgb(104, 104, 104);
+    }
+  }
+  .footer-cartas {
+    width: 100%;
+    height: 25px;
+    @include flexbox(row, space-between, center);
+    .pie-titulo:hover {
+      color: var(--color-textos-grandes);
+    }
   }
 }
 
@@ -800,8 +857,7 @@ img {
     }
     .cartas-blog {
       flex-basis: 30%;
-      display: flex;
-      flex-direction: column;
+      @include flexbox(column, center, center);
     }
   }
 }
