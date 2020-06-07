@@ -69,14 +69,17 @@ document.addEventListener("DOMContentLoaded", function () {
   secciones.forEach((section) => {
     observer.observe(section); //al usar querySelectorAll tengo un array con las secciones, y lo que quiero lograr es observar uno por uno
   });
-  let botonAbrir = document.querySelector(".boton-abrir");
-  let botonCerrar = document.querySelector(".boton-cerrar");
-  let menuDesplegable = document.querySelector(".menu-desplegable");
-  let cruzUno = document.querySelector(".cruz");
-  let cruzDos = document.querySelector(".cruz-02");
+
+  //INTERACCION MENU-DESPLEGABLE
+  const botonAbrir = document.querySelector(".boton-abrir");
+  const botonCerrar = document.querySelector(".boton-cerrar");
+  const menuDesplegable = document.querySelector(".menu-desplegable");
+  const cruzUno = document.querySelector(".cruz");
+  const cruzDos = document.querySelector(".cruz-02");
 
   botonAbrir.addEventListener("click", function abrir() {
     menuDesplegable.style.right = "0px";
+
     if ((cruzUno.style.transform = "rotate(0)")) {
       cruzUno.style.transform = "rotate(135deg)";
       cruzDos.style.transform = "rotate(-135deg)";
@@ -88,5 +91,13 @@ document.addEventListener("DOMContentLoaded", function () {
     menuDesplegable.style.right = "-100%";
     cruzUno.style.transform = "rotate(0)";
     cruzDos.style.transform = "rotate(0)";
+  });
+
+  //INTERACCION LINKS MENU-DESPLEGABLE
+  const links = document.querySelectorAll(".links");
+  links.forEach((link) => {
+    link.addEventListener("click", function irA() {
+      menuDesplegable.style.right = "-100%";
+    });
   });
 });
