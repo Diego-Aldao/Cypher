@@ -16,13 +16,16 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap"
       rel="stylesheet"
     />
-    <!--FONT-AWESOME-->
+    <!--FONT AWESOME-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
     />
     <!--SLICK SWIPER-->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <!--CSS LOCALES-->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
@@ -30,9 +33,13 @@
     <title>Cypher</title>
   </head>
   <body>
+    <!--INICIO SECCION HEADER-->
     <header id="inicio" class="header-principal">
+      <!--INICIO NAVEGACION PRINCIPAL-->
       <nav class="navegacion-principal">
-        <div class="logo-contenedor"><p class="logo">cypher</p></div>
+        <div class="logo-contenedor">
+          <a href="#inicio" class="logo">cypher</a>
+        </div>
         <div class="hamburguesa boton-abrir">
           <span></span>
           <span></span>
@@ -48,8 +55,8 @@
           <div class="contenedor-imagen-descripcion">
             <div class="imagen-desplegable">
               <img
-                src="./images/woman-posing-for-photo-shoot-1689731.webp"
-                alt=""
+                src="./images/imagen-menu-desplegable.webp"
+                alt="imagen menu desplegable"
               />
             </div>
             <div class="descripcion-desplegable">
@@ -75,6 +82,7 @@
           </div>
         </div>
       </nav>
+      <!--INICIO SLIDER CON SWIPER-->
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -112,7 +120,9 @@
                 </p>
               </div>
               <div data-swiper-parallax="-800">
-                <button class="btn btn-principal">Leer Mas</button>
+                <button class="btn btn-principal">
+                  <a href="#servicios">ver mas</a>
+                </button>
               </div>
             </div>
           </div>
@@ -169,7 +179,9 @@
                 </p>
               </div>
               <div data-swiper-parallax="-800">
-                <button class="btn btn-principal">Leer Mas</button>
+                <button class="btn btn-principal">
+                  <a href="#servicios">ver mas</a>
+                </button>
               </div>
             </div>
           </div>
@@ -208,7 +220,9 @@
                 </p>
               </div>
               <div data-swiper-parallax="-800">
-                <button class="btn btn-principal">Leer Mas</button>
+                <button class="btn btn-principal">
+                  <a href="#servicios">ver mas</a>
+                </button>
               </div>
             </div>
           </div>
@@ -216,6 +230,7 @@
         <div class="swiper-pagination"></div>
       </div>
     </header>
+    <!--INICIO SECCION SERVICIOS-->
     <section id="servicios" class="primer-seccion">
       <div class="contenedor">
         <header class="header-primer-seccion">
@@ -262,6 +277,7 @@
         </ul>
       </div>
     </section>
+    <!--INICIO SECCION PORTFOLIO-->
     <section id="portfolio" class="portfolio">
       <div class="contenedor">
         <header class="header-portfolio">
@@ -302,8 +318,8 @@
             <span class="delay-1 intersectionObserver"></span>
             <img
               loading="lazy"
-              src="./images/person-with-yellow-suit-sitting-on-a-chair-3770672.webp"
-              alt=""
+              src="./images/imagenes-proyectos/proyectos01.webp"
+              alt="persona proyectos 01"
             />
           </div>
         </div>
@@ -343,8 +359,8 @@
             <span class="delay-1 intersectionObserver"></span>
             <img
               loading="lazy"
-              src="./images/woman-in-brown-shirt-standing-1679011.webp"
-              alt=""
+              src="./images/imagenes-proyectos/proyectos02.webp"
+              alt="persona proyectos 02"
             />
           </div>
         </div>
@@ -380,8 +396,8 @@
             <span class="delay-1 intersectionObserver"></span>
             <img
               loading="lazy"
-              src="./images/woman-s-face-1988681.webp"
-              alt=""
+              src="./images/imagenes-proyectos/proyectos03.webp"
+              alt="persona proyectos 03"
             />
           </div>
         </div>
@@ -418,13 +434,14 @@
             <span class="delay-1 intersectionObserver"></span>
             <img
               loading="lazy"
-              src="./images/woman-in-black-jacket-and-jeans-standing-beside-wall-with-3956803.webp"
-              alt=""
+              src="./images/imagenes-proyectos/proyectos04.webp"
+              alt="persona proyectos 04"
             />
           </div>
         </div>
       </div>
     </section>
+    <!--INICIO SECCION PARTNERS-->
     <section id="partners" class="partners">
       <header class="header-partners">
         <h2 class="titulos-grandes">
@@ -445,108 +462,114 @@
           <img
             loading="lazy"
             src="./images/logos-business/kisspng-blue-bird-corporation-bus-blue-bird-micro-bird-blu-company-logo-5ad5b5a8d698d7.995529311523955112879.webp"
-            alt=""
+            alt="logo de compañia"
           />
         </div>
         <div class="compañia-item">
           <img
             loading="lazy"
             src="./images/logos-business/kisspng-ford-motor-company-car-lincoln-motor-company-logo-cars-logo-brands-5abc228e16ddd3.5895739815222790540937.webp"
-            alt=""
+            alt="logo de compañia"
           />
         </div>
         <div class="compañia-item">
           <img
             loading="lazy"
             src="./images/logos-business/kisspng-titan-watches-ltd-titan-company-manufacturing-logo-company-5abff46eda8c88.4644710915225293908952.webp"
-            alt=""
+            alt="logo de compañia"
           />
         </div>
         <div class="compañia-item">
           <img
             loading="lazy"
             src="./images/logos-business/kisspng-logo-stock-photography-royalty-free-clip-art-fashion-personalized-company-logo-vector-5a8616a12d4486.5804306715187370571854.webp"
-            alt=""
+            alt="logo de compañia"
           />
         </div>
         <div class="compañia-item">
           <img
             loading="lazy"
             src="./images/logos-business/kisspng-3d-printing-3d-printers-too-bad-so-sad-metal-quality-high-grade-business-card-5aef8af375c5d8.5772907315256481154824.webp"
-            alt=""
+            alt="logo de compañia"
           />
         </div>
         <div class="compañia-item">
           <img
             loading="lazy"
             src="./images/logos-business/kisspng-logo-nairobi-gospel-assembly-church-brand-architec-construction-company-logo-design-5b29a346558310.1003989415294554303503.webp"
-            alt=""
+            alt="logo de compañia"
           />
         </div>
         <div class="compañia-item">
           <img
             loading="lazy"
             src="./images/logos-business/kisspng-logo-home-improvement-royalty-free-illustration-creative-company-logo-vector-5a9d3bd4142984.4210473215202539080826.webp"
-            alt=""
+            alt="logo de compañia"
           />
         </div>
         <div class="compañia-item">
           <img
             loading="lazy"
             src="./images/logos-business/kisspng-logo-graphic-design-construction-company-logo-design-5b29a6e9ef9314.9821753215294563619813.webp"
-            alt=""
+            alt="logo de compañia"
           />
         </div>
         <div class="compañia-item">
           <img
             loading="lazy"
             src="./images/logos-business/kisspng-airbus-a350-airbus-middle-east-airbus-helicopters-emirates-vector-5ae04d22e9cd41.8863473715246492509577.webp"
-            alt=""
+            alt="logo de compañia"
           />
         </div>
         <div class="compañia-item">
           <img
             loading="lazy"
             src="./images/logos-business/kisspng-logo-royalty-free-illustration-creative-company-logo-vector-5a8332eecbb402.6224085115185476948344.webp"
-            alt=""
+            alt="logo de compañia"
           />
         </div>
         <div class="compañia-item">
           <img
             loading="lazy"
             src="./images/logos-business/5a305820764279.1610105215131177284844.webp"
-            alt=""
+            alt="logo de compañia"
           />
         </div>
         <div class="compañia-item">
           <img
             loading="lazy"
             src="/images/logos-business/kisspng-clip-art-vector-graphics-logo-field-hockey-image-151-bold-modern-logo-designs-for-ax-a-business-in-5bab039e3e0091.628554641537934238254.webp"
-            alt=""
+            alt="logo de compañia"
           />
         </div>
       </div>
     </section>
+    <!--INICIO SECCION TESTIMONIOS-->
     <section class="testimonios">
       <div class="swiper-contenedor">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="item-carrete">
               <div class="contenedor">
-                <div class="imagen-item-carrete"></div>
+                <div class="imagen-item-carrete">
+                  <img
+                    src="./images/personas-testimonios/persona01.webp"
+                    alt="persona testimonio 01"
+                  />
+                </div>
                 <div class="descripcion-item-carrete">
                   <p class="textos-comunes">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Error rerum repellat modi vero accusantium. Praesentium
                     saepe ratione temporibus omnis recusandae quis quam
                     aspernatur quasi molestias harum id eaque aperiam, cumque in
                     delectus error, quod a architecto officiis explicabo
-                    reiciendi
+                    reiciendi"
                   </p>
                 </div>
                 <div class="nombre-item-carrete">
                   <p class="mini-texto">
-                    sasuke uchiha, <span>web developer</span>
+                    Olivia Benavides, <span>traductora</span>
                   </p>
                 </div>
               </div>
@@ -555,20 +578,23 @@
           <div class="swiper-slide">
             <div class="item-carrete">
               <div class="contenedor">
-                <div class="imagen-item-carrete"></div>
+                <div class="imagen-item-carrete">
+                  <img
+                    src="./images/personas-testimonios/persona02.webp"
+                    alt="persona testimonio 02"
+                  />
+                </div>
                 <div class="descripcion-item-carrete">
                   <p class="textos-comunes">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Error rerum repellat modi vero accusantium. Praesentium
+                    "Error rerum repellat modi vero accusantium. Praesentium
                     saepe ratione temporibus omnis recusandae quis quam
                     aspernatur quasi molestias harum id eaque aperiam, cumque in
-                    delectus error, quod a architecto officiis explicabo
-                    reiciendi
+                    delectus error"
                   </p>
                 </div>
                 <div class="nombre-item-carrete">
                   <p class="mini-texto">
-                    sasuke uchiha, <span>web developer</span>
+                    Monica Mariscal, <span>enfermera</span>
                   </p>
                 </div>
               </div>
@@ -577,20 +603,23 @@
           <div class="swiper-slide">
             <div class="item-carrete">
               <div class="contenedor">
-                <div class="imagen-item-carrete"></div>
+                <div class="imagen-item-carrete">
+                  <img
+                    src="./images/personas-testimonios/persona03.webp"
+                    alt="persona testimonio 03"
+                  />
+                </div>
                 <div class="descripcion-item-carrete">
                   <p class="textos-comunes">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Error rerum repellat modi vero accusantium. Praesentium
-                    saepe ratione temporibus omnis recusandae quis quam
-                    aspernatur quasi molestias harum id eaque aperiam, cumque in
-                    delectus error, quod a architecto officiis explicabo
-                    reiciendi
+                    "Praesentium saepe ratione temporibus omnis recusandae quis
+                    quam aspernatur quasi molestias harum id eaque aperiam,
+                    cumque in delectus error, quod a architecto officiis
+                    explicabo reiciendi"
                   </p>
                 </div>
                 <div class="nombre-item-carrete">
                   <p class="mini-texto">
-                    sasuke uchiha, <span>web developer</span>
+                    gustavo velasco, <span>profesor</span>
                   </p>
                 </div>
               </div>
@@ -599,21 +628,22 @@
           <div class="swiper-slide">
             <div class="item-carrete">
               <div class="contenedor">
-                <div class="imagen-item-carrete"></div>
+                <div class="imagen-item-carrete">
+                  <img
+                    src="./images/personas-testimonios/persona04.webp"
+                    alt="persona testimonio 04"
+                  />
+                </div>
                 <div class="descripcion-item-carrete">
                   <p class="textos-comunes">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Error rerum repellat modi vero accusantium. Praesentium
                     saepe ratione temporibus omnis recusandae quis quam
-                    aspernatur quasi molestias harum id eaque aperiam, cumque in
-                    delectus error, quod a architecto officiis explicabo
-                    reiciendi
+                    aspernatur"
                   </p>
                 </div>
                 <div class="nombre-item-carrete">
-                  <p class="mini-texto">
-                    sasuke uchiha, <span>web developer</span>
-                  </p>
+                  <p class="mini-texto">Alba Romera, <span>modelo</span></p>
                 </div>
               </div>
             </div>
@@ -621,20 +651,25 @@
           <div class="swiper-slide">
             <div class="item-carrete">
               <div class="contenedor">
-                <div class="imagen-item-carrete"></div>
+                <div class="imagen-item-carrete">
+                  <img
+                    src="./images/personas-testimonios/persona05.webp"
+                    alt="persona testimonio 05"
+                  />
+                </div>
                 <div class="descripcion-item-carrete">
                   <p class="textos-comunes">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Error rerum repellat modi vero accusantium. Praesentium
                     saepe ratione temporibus omnis recusandae quis quam
                     aspernatur quasi molestias harum id eaque aperiam, cumque in
                     delectus error, quod a architecto officiis explicabo
-                    reiciendi
+                    reiciendi"
                   </p>
                 </div>
                 <div class="nombre-item-carrete">
                   <p class="mini-texto">
-                    sasuke uchiha, <span>web developer</span>
+                    claudio costa, <span>ingeniero</span>
                   </p>
                 </div>
               </div>
@@ -645,6 +680,7 @@
         <div class="swiper-puntitos"></div>
       </div>
     </section>
+    <!--INICIO SECCION BLOG-->
     <section id="blog" class="blog">
       <div class="contenedor">
         <header class="header-blog">
@@ -657,8 +693,8 @@
           <div class="contenedor-imagen-blog">
             <img
               loading="lazy"
-              src="./images/adult-dark-facial-expression-fashion-428340 (1).webp"
-              alt=""
+              src="./images/imagenes-blog/blog01.webp"
+              alt="persona blog 01"
             />
           </div>
           <div class="contenedor">
@@ -701,8 +737,8 @@
           <div class="contenedor-imagen-blog">
             <img
               loading="lazy"
-              src="./images/woman-wears-black-leather-zip-up-jacket-1035685 (1).webp"
-              alt=""
+              src="./images/imagenes-blog/blog02.webp"
+              alt="persona blog 02"
             />
           </div>
           <div class="contenedor">
@@ -745,8 +781,8 @@
           <div class="contenedor-imagen-blog">
             <img
               loading="lazy"
-              src="./images/woman-in-yellow-coat-with-black-crossbody-bag-closing-her-833052 (1).webp"
-              alt=""
+              src="./images/imagenes-blog/blog03.webp"
+              alt="persona blog 03"
             />
           </div>
           <div class="contenedor">
@@ -787,11 +823,9 @@
         </div>
       </div>
     </section>
+    <!--INICIO SECCION FOOTER-->
     <footer class="footer-home">
       <div class="contenedor">
-        <!--<div class="logo-footer">
-          <h1 class="textos-grandes">cypher</h1>
-        </div>-->
         <div class="nav-footer">
           <h1 class="textos-medianos">menu</h1>
           <ul>
@@ -806,7 +840,7 @@
           <h1 class="textos-medianos">contacto</h1>
           <div class="mail">
             <i class="far fa-envelope"></i>
-            <p class="textos-comunes">Lorem@impsum.com</p>
+            <p class="textos-comunes">cypher@contacto.com</p>
           </div>
           <div class="telefono">
             <i class="fas fa-mobile-alt"></i>
@@ -829,11 +863,11 @@
           </ul>
         </div>
         <div class="copy">
-          <p>&copy; todos los derechos reservados. 2020</p>
+          <p>&copy;cypher, todos los derechos reservados. 2020</p>
         </div>
       </div>
     </footer>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
